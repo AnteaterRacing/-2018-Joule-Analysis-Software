@@ -1,0 +1,10 @@
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

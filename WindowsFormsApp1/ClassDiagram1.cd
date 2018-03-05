@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="FRONT END&#xD;&#xA;Main GUI and supplemental forms to display log data and SQL database records&#xD;&#xA;">
+    <Position X="0.5" Y="0.5" Height="0.75" Width="3.133" />
+  </Comment>
+  <Comment CommentText="MIDDLE TIER&#xD;&#xA;Communication and data logger classes">
+    <Position X="3.967" Y="0.517" Height="0.75" Width="2.025" />
+  </Comment>
+  <Comment CommentText="BACK END DATA STORE&#xD;&#xA;My ADO Class and Global declares class">
+    <Position X="6.525" Y="0.5" Height="0.75" Width="3.133" />
+  </Comment>
+  <Class Name="XBEE_READER.Communication">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAGAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MIDDLE TIER\Communication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBEE_READER.DataLogger">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>MIDDLE TIER\DataLogger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBEE_READER.frmMain" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BgSIEhCABiBQCLECAACEAHwCRAxAIJABAHGAgIGAAAI=</HashCode>
+      <FileName>FRONT END\frmMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBEE_READER.frmSQLRecords">
+    <Position X="2" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>hQCAAABAAiAAAACAAACAAAACIAgQACAAAAAAAAAAABA=</HashCode>
+      <FileName>FRONT END\frmSQLRecords.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBEE_READER.General">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAABAAQAABAAgACAAAAEACAAAUAACAAgEBAAAg=</HashCode>
+      <FileName>MIDDLE TIER\General.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBEE_READER.MyADO">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAIAAAAAIAAAIAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>BACKEND\MyADO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XBEE_READER.ShowLogFile">
+    <Position X="2" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>DQAEAAAAACAAAAAAAACAAAACAAAAAAAAiAAAAAAAAAA=</HashCode>
+      <FileName>FRONT END\ShowLogFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

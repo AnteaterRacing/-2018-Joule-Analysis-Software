@@ -1,0 +1,21 @@
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\XBEE Reader9-26-17.csprojResolveAssemblyReference.cache
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\XBEE Reader9-26-17.csproj.GenerateResource.Cache
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\Production\Use this\XBEE Telemetry 9-26-2017\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\Production\Use this\XBEE Telemetry 9-26-2017\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\Production\Use this\XBEE Telemetry 9-26-2017\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\Production\Use this\XBEE Telemetry 9-26-2017\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\Production\Use this\XBEE Telemetry 9-26-2017\WindowsFormsApp1\obj\Debug\XBEE Reader9-26-17.csproj.GenerateResource.Cache
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\Production\Use this\XBEE Telemetry 9-26-2017\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe.config
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\Production\Use this\XBEE Telemetry 9-26-2017\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\Production\Use this\XBEE Telemetry 9-26-2017\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.pdb
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\Production\Use this\XBEE Telemetry 9-26-2017\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.exe
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\Production\Use this\XBEE Telemetry 9-26-2017\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.pdb

@@ -1,0 +1,121 @@
+﻿/*____________________________________________________
+ * U C I   A R D U I N O   A C C E L E R O M E T E R
+ * Telemetry Demo
+	Created 10/7/2017
+	Ron Kessler
+ *____________________________________________________ 
+ */
+
+//Use the calibration sketch to get ADXL335 readings
+
+#include <SoftwareSerial.h>      //8/13/2017  This is added to use digital pins 2 & 3. The XBEE shield makes those connections.
+
+SoftwareSerial XBeeSerial (2, 3); // RX, TX  XBEE shield connects to arduino com port. MAKE SURE SWITCH ON SHIELD IS SET TO DL.
+
+//define pins for the 3 axes
+
+const int xInput = A0;
+const int yInput = A1;
+const int zInput = A2;
+
+//---these are my readings so start here!
+int xRawMin = 409;
+int xRawMax = 616;
+
+int yRawMin = 404;
+int yRawMax = 610;
+
+int zRawMin = 414;
+int zRawMax = 629;
+
+// Take multiple samples to reduce noise
+const int sampleSize = 100;
+
+int xRaw = 0;
+int yRaw = 0;
+int zRaw = 0;
+
+long xScaled = 0;
+long yScaled = 0;
+long zScaled = 0;
+
+
+float xAccel = 0;
+float yAccel = 0;
+float zAccel = 0;
+
+
+
+void setup() 
+{
+  analogReference(EXTERNAL);
+  XBeeSerial.begin(9600);
+//  Serial.begin(9600);       //enable for testing
+}
+
+void loop() 
+{
+  //---grab the data from Arduino
+  xRaw = ReadAxis(xInput);
+  yRaw = ReadAxis(yInput);
+  zRaw = ReadAxis(zInput);
+  
+    // Convert raw values to 'milli-Gs"
+    xScaled = map(xRaw, xRawMin, xRawMax, -1000, 1000);
+    yScaled = map(yRaw, yRawMin, yRawMax, -1000, 1000);
+    zScaled = map(zRaw, zRawMin, zRawMax, -1000, 1000);
+  
+    // re-scale to fractional Gs
+    xAccel = xScaled / 1000.0;
+    yAccel = yScaled / 1000.0;
+    zAccel = zScaled / 1000.0;
+
+  //********************Send Sensor Readings to XBEE via Serial port********************
+  //10/7/2017 This transmits telemetry data to the XBEE in my Com port in the PC.
+  //Settings are 9600/8/N/1
+
+
+  //---now send the formatted data to serial for monitoring
+   
+//    Serial.print(xAccel);
+//    Serial.print("G, ");
+//    Serial.print(yAccel);
+//    Serial.print("G, ");
+//    Serial.print(zAccel);
+//    Serial.println("G");
+//  
+//  delay(500);
+
+
+  if (XBeeSerial.available () > 0)
+      {
+        XBeeSerial.print("X");            //this prefixes an X to the x-axis reading
+        XBeeSerial.println (xAccel);
+    
+        XBeeSerial.print("Y");            //this prefixes a Y
+        XBeeSerial.println (yAccel);
+        
+        XBeeSerial.print("Z");
+        XBeeSerial.println(zAccel);
+               
+        delay (100);    
+    
+      }
+}
+
+//
+// Read samples and report the average
+//
+int ReadAxis(int axisPin)
+{
+  long reading = 0;
+  analogRead(axisPin);
+  delay(1);
+  for (int i = 0; i < sampleSize; i++)
+  {
+    reading += analogRead(axisPin);
+  }
+  return reading/sampleSize;
+}
+
+

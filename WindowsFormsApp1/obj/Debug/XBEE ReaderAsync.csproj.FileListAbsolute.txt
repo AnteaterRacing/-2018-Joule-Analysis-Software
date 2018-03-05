@@ -1,0 +1,14 @@
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\XBEE ReaderAsync.csprojResolveAssemblyReference.cache
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\XBEE ReaderAsync.csproj.GenerateResource.Cache
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-25-17 - AsyncSerial\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

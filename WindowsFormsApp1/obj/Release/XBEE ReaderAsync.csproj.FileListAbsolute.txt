@@ -1,0 +1,20 @@
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe.config
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\bin\Release\WindowsFormsApp1.pdb
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\XBEE_READER.frmMain.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\XBEE_READER.Properties.Resources.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\XBEE_READER.ShowLogFile.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\XBEE_READER.frmSQLRecords.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\XBEE ReaderAsync.csproj.GenerateResource.Cache
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\WindowsFormsApp1.exe
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\WindowsFormsApp1.pdb
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe.config
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\WindowsFormsApp1.exe
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\WindowsFormsApp1.pdb
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\bin\Release\WindowsFormsApp1.pdb
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\XBEE_READER.frmMain.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\XBEE_READER.Properties.Resources.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\XBEE_READER.ShowLogFile.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\XBEE_READER.frmSQLRecords.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17 - AsyncSerial\WindowsFormsApp1\obj\Release\XBEE ReaderAsync.csproj.GenerateResource.Cache

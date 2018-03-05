@@ -1,0 +1,103 @@
+Y:\ADVANCED PROGRAMMING\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csprojResolveAssemblyReference.cache
+Y:\ADVANCED PROGRAMMING\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+Y:\ADVANCED PROGRAMMING\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+Y:\ADVANCED PROGRAMMING\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+Y:\ADVANCED PROGRAMMING\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+Y:\ADVANCED PROGRAMMING\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.GenerateResource.Cache
+Y:\ADVANCED PROGRAMMING\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.CoreCompileInputs.cache
+Y:\ADVANCED PROGRAMMING\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.exe
+Y:\ADVANCED PROGRAMMING\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.pdb
+C:\Users\Ron\Desktop\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+C:\Users\Ron\Desktop\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+C:\Users\Ron\Desktop\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+C:\Users\Ron\Desktop\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+C:\Users\Ron\Desktop\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.GenerateResource.Cache
+C:\Users\Ron\Desktop\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.CoreCompileInputs.cache
+C:\Users\Ron\Desktop\UCI\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe.config
+C:\Users\Ron\Desktop\UCI\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe
+C:\Users\Ron\Desktop\UCI\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.pdb
+C:\Users\Ron\Desktop\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.exe
+C:\Users\Ron\Desktop\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.pdb
+C:\Users\Ron\Desktop\UCI\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csprojResolveAssemblyReference.cache
+C:\Users\Ron\Desktop\UCI 10-11\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe.config
+C:\Users\Ron\Desktop\UCI 10-11\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.exe
+C:\Users\Ron\Desktop\UCI 10-11\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.pdb
+C:\Users\Ron\Desktop\UCI 10-11\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe
+C:\Users\Ron\Desktop\UCI 10-11\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.pdb
+C:\Users\Ron\Desktop\UCI 10-11\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csprojResolveAssemblyReference.cache
+C:\Users\Ron\Desktop\UCI 10-11\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+C:\Users\Ron\Desktop\UCI 10-11\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+C:\Users\Ron\Desktop\UCI 10-11\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+C:\Users\Ron\Desktop\UCI 10-11\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+C:\Users\Ron\Desktop\UCI 10-11\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.GenerateResource.Cache
+C:\Users\Ron\Desktop\UCI 10-13\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe.config
+C:\Users\Ron\Desktop\UCI 10-13\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe
+C:\Users\Ron\Desktop\UCI 10-13\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.pdb
+C:\Users\Ron\Desktop\UCI 10-13\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+C:\Users\Ron\Desktop\UCI 10-13\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+C:\Users\Ron\Desktop\UCI 10-13\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+C:\Users\Ron\Desktop\UCI 10-13\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+C:\Users\Ron\Desktop\UCI 10-13\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.GenerateResource.Cache
+C:\Users\Ron\Desktop\UCI 10-13\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.CoreCompileInputs.cache
+C:\Users\Ron\Desktop\UCI 10-13\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.exe
+C:\Users\Ron\Desktop\UCI 10-13\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.pdb
+C:\Users\Ron\Desktop\UCI 10-13\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csprojResolveAssemblyReference.cache
+C:\Users\Ron\Desktop\UCI\UCI 10-13-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe.config
+C:\Users\Ron\Desktop\UCI\UCI 10-13-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe
+C:\Users\Ron\Desktop\UCI\UCI 10-13-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.pdb
+C:\Users\Ron\Desktop\UCI\UCI 10-13-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+C:\Users\Ron\Desktop\UCI\UCI 10-13-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+C:\Users\Ron\Desktop\UCI\UCI 10-13-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+C:\Users\Ron\Desktop\UCI\UCI 10-13-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+C:\Users\Ron\Desktop\UCI\UCI 10-13-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.GenerateResource.Cache
+C:\Users\Ron\Desktop\UCI\UCI 10-13-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.CoreCompileInputs.cache
+C:\Users\Ron\Desktop\UCI\UCI 10-13-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.exe
+C:\Users\Ron\Desktop\UCI\UCI 10-13-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.pdb
+C:\Users\Ron\Desktop\UCI\UCI 10-13-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csprojResolveAssemblyReference.cache
+C:\Users\Ron\Desktop\UCI\UCI 10-15-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe.config
+C:\Users\Ron\Desktop\UCI\UCI 10-15-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe
+C:\Users\Ron\Desktop\UCI\UCI 10-15-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.pdb
+C:\Users\Ron\Desktop\UCI\UCI 10-15-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csprojResolveAssemblyReference.cache
+C:\Users\Ron\Desktop\UCI\UCI 10-15-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+C:\Users\Ron\Desktop\UCI\UCI 10-15-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+C:\Users\Ron\Desktop\UCI\UCI 10-15-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+C:\Users\Ron\Desktop\UCI\UCI 10-15-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+C:\Users\Ron\Desktop\UCI\UCI 10-15-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.GenerateResource.Cache
+C:\Users\Ron\Desktop\UCI\UCI 10-15-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.CoreCompileInputs.cache
+C:\Users\Ron\Desktop\UCI\UCI 10-15-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.exe
+C:\Users\Ron\Desktop\UCI\UCI 10-15-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.pdb
+C:\Users\Ron\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe.config
+C:\Users\Ron\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe
+C:\Users\Ron\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.pdb
+C:\Users\Ron\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+C:\Users\Ron\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+C:\Users\Ron\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+C:\Users\Ron\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+C:\Users\Ron\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.GenerateResource.Cache
+C:\Users\Ron\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.exe
+C:\Users\Ron\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.pdb
+C:\Users\Ron\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csprojResolveAssemblyReference.cache
+Y:\ADVANCED PROGRAMMING\UCI\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe.config
+Y:\ADVANCED PROGRAMMING\UCI\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe
+Y:\ADVANCED PROGRAMMING\UCI\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.pdb
+Y:\ADVANCED PROGRAMMING\UCI\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csprojResolveAssemblyReference.cache
+Y:\ADVANCED PROGRAMMING\UCI\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+Y:\ADVANCED PROGRAMMING\UCI\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+Y:\ADVANCED PROGRAMMING\UCI\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+Y:\ADVANCED PROGRAMMING\UCI\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+Y:\ADVANCED PROGRAMMING\UCI\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.GenerateResource.Cache
+Y:\ADVANCED PROGRAMMING\UCI\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.CoreCompileInputs.cache
+Y:\ADVANCED PROGRAMMING\UCI\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.exe
+Y:\ADVANCED PROGRAMMING\UCI\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.pdb
+C:\Users\ejsutton\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe.config
+C:\Users\ejsutton\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.exe
+C:\Users\ejsutton\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\bin\Debug\XBEE_Telemetry.pdb
+C:\Users\ejsutton\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csprojResolveAssemblyReference.cache
+C:\Users\ejsutton\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+C:\Users\ejsutton\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+C:\Users\ejsutton\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+C:\Users\ejsutton\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+C:\Users\ejsutton\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.GenerateResource.Cache
+C:\Users\ejsutton\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Accelerometer.csproj.CoreCompileInputs.cache
+C:\Users\ejsutton\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.exe
+C:\Users\ejsutton\Desktop\UCI 10-22-2017\RC Telemetry\WindowsFormsApp1\obj\Debug\XBEE_Telemetry.pdb

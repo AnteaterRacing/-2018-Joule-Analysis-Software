@@ -1,0 +1,63 @@
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE Reader.csproj.GenerateResource.Cache
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE Reader.csproj.CoreCompileInputs.cache
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE Reader.csprojResolveAssemblyReference.cache
+C:\Users\Ron\Desktop\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE Reader.csproj.GenerateResource.Cache
+C:\Users\Ron\Desktop\ReadWeatherDemo\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Ron\Desktop\ReadWeatherDemo\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Ron\Desktop\ReadWeatherDemo\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Ron\Desktop\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Ron\Desktop\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Ron\Desktop\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE Reader.csprojResolveAssemblyReference.cache
+C:\Users\Ron\Desktop\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE Reader.csproj.CoreCompileInputs.cache
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-22-17\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-22-17\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-22-17\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-22-17\WindowsFormsApp1\obj\Debug\XBEE Reader.csprojResolveAssemblyReference.cache
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-22-17\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-22-17\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-22-17\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-22-17\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-22-17\WindowsFormsApp1\obj\Debug\XBEE Reader.csproj.GenerateResource.Cache
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-22-17\WindowsFormsApp1\obj\Debug\XBEE Reader.csproj.CoreCompileInputs.cache
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-22-17\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\In Process\ReadWeatherDemo_9-22-17\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE Reader.csproj.GenerateResource.Cache
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE Reader.csproj.CoreCompileInputs.cache
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Ron\Desktop\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE Reader.csprojResolveAssemblyReference.cache
+C:\Users\Ron\Desktop\XBEE This PC\ReadWeatherDemo_9-24-17\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Ron\Desktop\XBEE This PC\ReadWeatherDemo_9-24-17\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Ron\Desktop\XBEE This PC\ReadWeatherDemo_9-24-17\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Ron\Desktop\XBEE This PC\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE Reader.csprojResolveAssemblyReference.cache
+C:\Users\Ron\Desktop\XBEE This PC\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE_READER.frmMain.resources
+C:\Users\Ron\Desktop\XBEE This PC\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE_READER.Properties.Resources.resources
+C:\Users\Ron\Desktop\XBEE This PC\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE_READER.ShowLogFile.resources
+C:\Users\Ron\Desktop\XBEE This PC\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE_READER.frmSQLRecords.resources
+C:\Users\Ron\Desktop\XBEE This PC\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE Reader.csproj.GenerateResource.Cache
+C:\Users\Ron\Desktop\XBEE This PC\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\XBEE Reader.csproj.CoreCompileInputs.cache
+C:\Users\Ron\Desktop\XBEE This PC\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Ron\Desktop\XBEE This PC\ReadWeatherDemo_9-24-17\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

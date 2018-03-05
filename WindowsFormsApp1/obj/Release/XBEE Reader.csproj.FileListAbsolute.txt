@@ -1,0 +1,22 @@
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe.config
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\bin\Release\WindowsFormsApp1.pdb
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\XBEE Reader.csprojResolveAssemblyReference.cache
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\XBEE_READER.frmMain.resources
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\XBEE_READER.Properties.Resources.resources
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\XBEE_READER.ShowLogFile.resources
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\XBEE_READER.frmSQLRecords.resources
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\XBEE Reader.csproj.GenerateResource.Cache
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\WindowsFormsApp1.exe
+Z:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\WindowsFormsApp1.pdb
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe.config
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\WindowsFormsApp1.exe
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\WindowsFormsApp1.pdb
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\XBEE_READER.frmMain.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\XBEE_READER.Properties.Resources.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\XBEE_READER.ShowLogFile.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\XBEE_READER.frmSQLRecords.resources
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\XBEE Reader.csproj.GenerateResource.Cache
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\bin\Release\WindowsFormsApp1.pdb
+Y:\ADVANCED PROGRAMMING\XBEE Telemetry\ReadWeatherDemo\WindowsFormsApp1\obj\Release\XBEE Reader.csprojResolveAssemblyReference.cache
