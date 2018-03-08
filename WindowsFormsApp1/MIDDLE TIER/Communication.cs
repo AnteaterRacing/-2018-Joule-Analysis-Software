@@ -59,7 +59,7 @@ namespace XBEE_READER
         #endregion
 
         #region Read Raw Data & Parse it
-
+       
         internal static void GetStream()
         {
             //---grab any data coming from Com port
@@ -71,7 +71,12 @@ namespace XBEE_READER
                     byte[] buffer = new byte[numOfBytes];
                     General.XBee.Read(buffer, 0, numOfBytes);
 
-                    
+                    General.receiveString = System.Text.Encoding.Default.GetString(buffer);
+                    ParseData(General.receiveString);
+
+                    //General.rxString = General.XBee.ReadExisting();
+
+
 
                     General.mainForm.UpdateGUI();
                 }
@@ -97,18 +102,65 @@ namespace XBEE_READER
             {
                 if (XBEEData.Length > 2)
                 {
-                        /*
-                        if (XBEEData.Substring(0, 1) == "X")
-                            General.XAxis = XBEEData;
-                        else if (XBEEData.Substring(0, 1) == "Y")
-                            General.YAxis = XBEEData;
-                        else if (XBEEData.Substring(0, 1) == "Z")
-                            General.ZAxis = XBEEData;
-                            */
+                    /* 
+                     * For tire and motor temp, use 2 bytes per sensor.
+                     * Since first 14 sensors in protocol are tire temperature then motor temperature
+                     * the first 28 bytes (numbers) correspond to those 14 sensors
+                     */
+
+                    General.TTBR1 = XBEEData.Substring(0, 2);
+                    General.TTBR2 = XBEEData.Substring(2, 4);
+                    General.TTBR3 = XBEEData.Substring(4, 6);
+
+                    General.TTBL1 = XBEEData.Substring(6, 8);
+                    General.TTBL2 = XBEEData.Substring(8, 10);
+                    General.TTBL3 = XBEEData.Substring(10, 12);
+
+                    General.TTFR1 = XBEEData.Substring(12, 14);
+                    General.TTFR2 = XBEEData.Substring(14, 16);
+                    General.TTFR3 = XBEEData.Substring(16, 18);
+
+                    General.TTFL1 = XBEEData.Substring(18, 20);
+                    General.TTFL2 = XBEEData.Substring(20, 22);
+                    General.TTFL3 = XBEEData.Substring(22, 24);
+
+                    General.MT1 = XBEEData.Substring(24, 26);
+                    General.MT2 = XBEEData.Substring(26, 28);
+
+                    /*
+                   
+                    // Wheel speed sensor data being set
+                    General.WSBR = XBEEData.Substring(, );
+                    General.WSBL = XBEEData.Substring(, );
+                    General.WSFR = XBEEData.Substring(, );          
+                    General.WSFL = XBEEData.Substring(, );
 
 
-                        //---update the GUI with a call to the form's method
-                     
+                    // Throttle positions being set
+                    General.throttleR = XBEEData.Substring(, );
+                    General.throttleL = XBEEData.Substring(, );
+                    
+
+                    // Battery pack data being set
+                    General.packVoltage = XBEEData.Substring(, );
+                    General.packCurrent = XBEEData.Substring(, );
+                    General.packTemperature = XBEEData.Substring(, );
+
+
+                    // Steering angle being set
+                    General.steeringAngle = XBEEData.Substring(, );
+
+
+                    // Accelerator and brake angle being set
+                    General.accelAngle = XBEEData.Substring(, );
+                    General.brakeAngle = XBEEData.Substring(, );
+
+                    */
+
+
+
+                    //---update the GUI with a call to the form's method
+
                 }
             }
             catch (Exception ex)
