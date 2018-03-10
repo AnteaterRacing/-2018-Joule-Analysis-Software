@@ -111,8 +111,6 @@ namespace XBEE_READER
         public frmMain()
         {
             InitializeComponent();
-
-          
         }
 #endregion 
 
@@ -201,10 +199,8 @@ namespace XBEE_READER
             timer1.Enabled = false;
 
             //---10/22/2017 Now load the listbox when they click stop automatically            
-                foreach(string eachItem in General.rawReadings)
-                    lbHistory.Items.Add(eachItem);
-                
-            
+                //foreach(string eachItem in General.rawReadings)
+                    //lbHistory.Items.Add(eachItem);
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -226,14 +222,14 @@ namespace XBEE_READER
             chart1.ChartAreas[0].AxisX.Minimum = now.AddSeconds(-chartSpeed).ToOADate();    //need the neg value here
 
             //---now show the data series they selected
-            if (graphX)
-                chart1.Series["xAxis"].Points.AddXY(now.ToOADate(), lblxAxis.Text);
+            //if (graphX)
+            //    chart1.Series["xAxis"].Points.AddXY(now.ToOADate(), lblxAxis.Text);
 
-            if (graphY)
-                chart1.Series["yAxis"].Points.AddXY(now.ToOADate(), lblyAxis.Text);
+            //if (graphY)
+            //    chart1.Series["yAxis"].Points.AddXY(now.ToOADate(), lblyAxis.Text);
 
-            if (graphZ)
-                chart1.Series["zAxis"].Points.AddXY(now.ToOADate(), lblzAxis.Text);
+            //if (graphZ)
+                //chart1.Series["zAxis"].Points.AddXY(now.ToOADate(), lblzAxis.Text);
                  
         }
 
@@ -354,13 +350,13 @@ namespace XBEE_READER
 
                 //---10/22/2017 Save raw data in a list structure. Faster than add to listbox?
 
-                General.rawReadings.Add(General.XAxis);
-                General.rawReadings.Add(General.YAxis);
-                General.rawReadings.Add(General.ZAxis);
-                General.rawReadings.Add("");
+                //General.rawReadings.Add(General.XAxis);
+                //General.rawReadings.Add(General.YAxis);
+                //General.rawReadings.Add(General.ZAxis);
+                //General.rawReadings.Add("");
             }
         }
-     
+
 
         #endregion
 

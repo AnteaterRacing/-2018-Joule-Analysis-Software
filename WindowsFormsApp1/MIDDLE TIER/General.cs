@@ -13,7 +13,6 @@ _________________________________________
  */
 using System.Windows.Forms;
 using System.IO.Ports;
-
 using System.Collections.Generic;
 
 
@@ -28,18 +27,28 @@ namespace XBEE_READER
 
         #region My Static References/Objects
                 public static frmMain mainForm;     //we use this as a handle to the main form(frmMain)
-
+             
                 //internal static SerialPort RS232 = new SerialPort();        //define our serial port
 
                 internal static SerialPort XBee = new SerialPort();         // define serial port for Xbee
 
-                internal static List<string> rawReadings = new List<string>();
+
+                internal static List<int> sensorData = new List<int>();
+
+
+
+
+        //internal static List<string> rawReadings = new List<string>();
+
+
         #endregion
 
         #region Properties
 
+       
+
         private static string _connMsg = "Connected...";
-       internal static string ConnectedMsg
+        internal static string ConnectedMsg
         {
             get { return _connMsg; }
 
@@ -68,53 +77,53 @@ namespace XBEE_READER
 
 
         // Tire temperature sensor data
-        internal static string TTBR1 { get; set; }
-        internal static string TTBR2 { get; set; }
-        internal static string TTBR3 { get; set; }
+        internal static int TTBR1 { get; set; }
+        internal static int TTBR2 { get; set; }
+        internal static int TTBR3 { get; set; }
 
-        internal static string TTBL1 { get; set; }
-        internal static string TTBL2 { get; set; }
-        internal static string TTBL3 { get; set; }
+        internal static int TTBL1 { get; set; }
+        internal static int TTBL2 { get; set; }
+        internal static int TTBL3 { get; set; }
 
-        internal static string TTFR1 { get; set; }
-        internal static string TTFR2 { get; set; }
-        internal static string TTFR3 { get; set; }
+        internal static int TTFR1 { get; set; }
+        internal static int TTFR2 { get; set; }
+        internal static int TTFR3 { get; set; }
 
-        internal static string TTFL1 { get; set; }
-        internal static string TTFL2 { get; set; }
-        internal static string TTFL3 { get; set; }
+        internal static int TTFL1 { get; set; }
+        internal static int TTFL2 { get; set; }
+        internal static int TTFL3 { get; set; }
 
 
         // Motor temperature sensor data
-        internal static string MT1 { get; set; }
-        internal static string MT2 { get; set; }
+        internal static int MT1 { get; set; }
+        internal static int MT2 { get; set; }
 
 
         // Wheel speed sensor data
-        internal static string WSBR { get; set; }
-        internal static string WSBL { get; set; }
-        internal static string WSFR { get; set; }
-        internal static string WSFL { get; set; }
+        internal static int WSBR { get; set; }
+        internal static int WSBL { get; set; }
+        internal static int WSFR { get; set; }
+        internal static int WSFL { get; set; }
 
 
         // Throttle position sensor data
-        internal static string throttleR { get; set; }
-        internal static string throttleL { get; set; }
+        internal static int throttleR { get; set; }
+        internal static int throttleL { get; set; }
 
 
         // Battery pack voltage, current, and temperature sensor data
-        internal static string packVoltage { get; set; }
-        internal static string packCurrent { get; set; }
-        internal static string packTemperature { get; set; }
+        internal static int packVoltage { get; set; }
+        internal static int packCurrent { get; set; }
+        internal static int packTemperature { get; set; }
 
 
         // Steering angle sensor data
-        internal static string steeringAngle { get; set; }
+        internal static int steeringAngle { get; set; }
 
 
         // Accelerator and brake angle
-        internal static string accelAngle { get; set; }
-        internal static string brakeAngle { get; set; }
+        internal static int accelAngle { get; set; }
+        internal static int brakeAngle { get; set; }
 
 
 

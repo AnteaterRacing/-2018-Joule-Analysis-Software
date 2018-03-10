@@ -14,16 +14,17 @@ This class manages com operations
                                 GetStream() every 500 ms.  Then ParseData() calls the UpdateGUI()
                                 method on frmMain. This makes the GUI display data very fast!
  */
+
 using System;
 using System.Windows.Forms;
 using System.IO.Ports;              //add this
+using System.IO;
 
 namespace XBEE_READER
 {
-   public class Communication
+    public class Communication
     {
-        
-      
+
         #region Open Com Port
         internal static bool OpenCom()
         {
@@ -67,31 +68,78 @@ namespace XBEE_READER
             {
                 if (General.XBee.IsOpen)
                 {
-                    int numOfBytes = General.XBee.BytesToRead;
-                    byte[] buffer = new byte[numOfBytes];
-                    General.XBee.Read(buffer, 0, numOfBytes);
+                    int numOfSensors = General.XBee.BytesToRead; // number of bytes in receive buffer (COM port storage?) 
+                                                                 // number would be 26 if we had 26 sensors
 
-                    General.receiveString = System.Text.Encoding.Default.GetString(buffer);
-                    ParseData(General.receiveString);
+                    byte[] buffer = new byte[numOfSensors]; // creates an array of bytes that we will store sensor data into
+                                                            // if we had 26 sensors then buffer would have 26 elements
+                                                            // these bytes are between 0-254 and represent the value for each sensor
 
-                    //General.rxString = General.XBee.ReadExisting();
+                    General.XBee.Read(buffer, 0, numOfSensors); // puts the bytes from COM port into the buffer array
 
+
+                    for (int i = 0; i < numOfSensors; i++) // going through and converting the bytes into integers
+                        General.sensorData.Add(buffer[i]); // converting byte to int and storing in an int array
+
+                    //setSensorValues(); // sets the values for each sensor to the ones in the int array
+                    //printToFile(); // puts this stream of sensor values into another file for future use
 
 
                     General.mainForm.UpdateGUI();
                 }
-
-                //if (General.RS232.IsOpen)
-                //{
-                //    do
-                //    {
-                //        string myStream = General.RS232.ReadLine();
-                //        ParseData(myStream);
-                //    }
-                //    while (General.RS232.BytesToRead > 2);
-                //}
             }
         }
+
+        public static void setSensorValues()
+        {
+            General.TTBR1 = General.sensorData[0];
+            General.TTBR2 = General.sensorData[1];
+            General.TTBR3 = General.sensorData[2];
+
+            General.TTBL1 = General.sensorData[3];
+            General.TTBL2 = General.sensorData[4];
+            General.TTBL3 = General.sensorData[5];
+
+            General.TTFR1 = General.sensorData[6];
+            General.TTFR2 = General.sensorData[7];
+            General.TTFR3 = General.sensorData[8];
+
+            General.TTFL1 = General.sensorData[9];
+            General.TTFL2 = General.sensorData[10];
+            General.TTFL3 = General.sensorData[11];
+
+            General.MT1 = General.sensorData[12];
+            General.MT2 = General.sensorData[13];
+
+
+            // Wheel speed sensor data being set
+            General.WSBR = General.sensorData[14];
+            General.WSBL = General.sensorData[15];
+            General.WSFR = General.sensorData[16];
+            General.WSFL = General.sensorData[17];
+
+
+            // Throttle positions being set
+            General.throttleR = General.sensorData[18];
+            General.throttleL = General.sensorData[19];
+
+
+            // Battery pack data being set
+            General.packVoltage = General.sensorData[20];
+            General.packCurrent = General.sensorData[21];
+            General.packTemperature = General.sensorData[22];
+
+
+            // Steering angle being set
+            General.steeringAngle = General.sensorData[23];
+
+
+            // Accelerator and brake angle being set
+            General.accelAngle = General.sensorData[24];
+            General.brakeAngle = General.sensorData[25];
+        }
+
+
 
 
 
@@ -108,56 +156,7 @@ namespace XBEE_READER
                      * the first 28 bytes (numbers) correspond to those 14 sensors
                      */
 
-                    General.TTBR1 = XBEEData.Substring(0, 2);
-                    General.TTBR2 = XBEEData.Substring(2, 4);
-                    General.TTBR3 = XBEEData.Substring(4, 6);
-
-                    General.TTBL1 = XBEEData.Substring(6, 8);
-                    General.TTBL2 = XBEEData.Substring(8, 10);
-                    General.TTBL3 = XBEEData.Substring(10, 12);
-
-                    General.TTFR1 = XBEEData.Substring(12, 14);
-                    General.TTFR2 = XBEEData.Substring(14, 16);
-                    General.TTFR3 = XBEEData.Substring(16, 18);
-
-                    General.TTFL1 = XBEEData.Substring(18, 20);
-                    General.TTFL2 = XBEEData.Substring(20, 22);
-                    General.TTFL3 = XBEEData.Substring(22, 24);
-
-                    General.MT1 = XBEEData.Substring(24, 26);
-                    General.MT2 = XBEEData.Substring(26, 28);
-
-                    /*
-                   
-                    // Wheel speed sensor data being set
-                    General.WSBR = XBEEData.Substring(, );
-                    General.WSBL = XBEEData.Substring(, );
-                    General.WSFR = XBEEData.Substring(, );          
-                    General.WSFL = XBEEData.Substring(, );
-
-
-                    // Throttle positions being set
-                    General.throttleR = XBEEData.Substring(, );
-                    General.throttleL = XBEEData.Substring(, );
                     
-
-                    // Battery pack data being set
-                    General.packVoltage = XBEEData.Substring(, );
-                    General.packCurrent = XBEEData.Substring(, );
-                    General.packTemperature = XBEEData.Substring(, );
-
-
-                    // Steering angle being set
-                    General.steeringAngle = XBEEData.Substring(, );
-
-
-                    // Accelerator and brake angle being set
-                    General.accelAngle = XBEEData.Substring(, );
-                    General.brakeAngle = XBEEData.Substring(, );
-
-                    */
-
-
 
                     //---update the GUI with a call to the form's method
 

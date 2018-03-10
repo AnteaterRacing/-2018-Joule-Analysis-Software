@@ -84,33 +84,33 @@ namespace XBEE_READER
 
             try
             {
-                foreach (string myItem in General.rawReadings)      //10/22/2017 read from list not listbox
-                {
-                        if (myItem.Trim().Length > 0)
-                        {
+                //foreach (string myItem in General.rawReadings)      //10/22/2017 read from list not listbox
+                //{
+                //        if (myItem.Trim().Length > 0)
+                //        {
 
-                            if (myItem.Substring(0, 1) == "X")
-                            {
+                //            if (myItem.Substring(0, 1) == "X")
+                //            {
 
-                                itemXFromLB = myItem.Substring(1);
-                                cmd.Parameters.AddWithValue("@xAxis", itemXFromLB);
-                            }
-                            else if (myItem.Substring(0, 1) == "Y")
-                            {
-                                itemYFromLB = myItem.Substring(1);
-                                cmd.Parameters.AddWithValue("@yAxis", itemYFromLB);
-                            }
-                            else if (myItem.Substring(0, 1) == "Z")
-                            {
-                                itemZFromLB = myItem.Substring(1);
-                                cmd.Parameters.AddWithValue("@zAxis", itemZFromLB);
+                //                itemXFromLB = myItem.Substring(1);
+                //                cmd.Parameters.AddWithValue("@xAxis", itemXFromLB);
+                //            }
+                //            else if (myItem.Substring(0, 1) == "Y")
+                //            {
+                //                itemYFromLB = myItem.Substring(1);
+                //                cmd.Parameters.AddWithValue("@yAxis", itemYFromLB);
+                //            }
+                //            else if (myItem.Substring(0, 1) == "Z")
+                //            {
+                //                itemZFromLB = myItem.Substring(1);
+                //                cmd.Parameters.AddWithValue("@zAxis", itemZFromLB);
 
-                                //---now since we have all three readings, make it so!
-                                cmd.ExecuteNonQuery();
-                                cmd.Parameters.Clear();         //use this or it will keep using old parameter values!
-                            }
-                        }
-                }
+                //                //---now since we have all three readings, make it so!
+                //                cmd.ExecuteNonQuery();
+                //                cmd.Parameters.Clear();         //use this or it will keep using old parameter values!
+                //            }
+                //        }
+                //}
                 trans.Commit();
                 myConn.Close();
                 General.NotifyUser("Your SQL records have been saved. ");

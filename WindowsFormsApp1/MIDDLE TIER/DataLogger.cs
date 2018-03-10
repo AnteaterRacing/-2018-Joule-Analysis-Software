@@ -24,11 +24,24 @@ namespace XBEE_READER
 
         #region Save to Text File
         //---if the want logging, save data to textfile in project folder.
-        
+
+        //public static void printToFile()
+        //{
+        //    using (var file = File.CreateText("testFile.txt"))
+        //    {
+        //        for (int i = 0; i < General.sensorData.Count; i++)
+        //        {
+        //            file.Write(General.sensorData[i]);
+        //            file.Write(',');
+        //        }
+        //        file.WriteLine();
+        //    }
+        //}
+
         internal static void Save2File()
         {
            //if (General.mainForm.lbHistory.Items.Count > 0)
-           if (General.rawReadings.Count >0)            //read from list not listbox 10/22/2017
+            if (General.sensorData.Count > 0)            //read from list not listbox 10/22/2017
             {
                 DateTime now = DateTime.Now;
                 try
@@ -41,7 +54,7 @@ namespace XBEE_READER
                         myWriter.WriteLine(" ");
 
                         //---cycle through list and save items
-                        foreach(string whichItem in General.rawReadings)       //use list structure not listbox 10/22/2017
+                        foreach(int whichItem in General.sensorData)       //use list structure not listbox 10/22/2017
                         {
                             myWriter.Write(whichItem);
                         }
