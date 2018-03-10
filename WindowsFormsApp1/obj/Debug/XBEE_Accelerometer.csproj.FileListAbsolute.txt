@@ -113,3 +113,15 @@ C:/Users/ejsutton/Desktop/UCI 10-22-2017/RC Telemetry/WindowsFormsApp1/obj/Debug
 /Users/ericsutton/Desktop/UPDATEDXBeeCode/UCI 10-22-2017/RC Telemetry/WindowsFormsApp1/bin/Debug/XBEE_Telemetry.exe.config
 /Users/ericsutton/Desktop/UPDATEDXBeeCode/UCI 10-22-2017/RC Telemetry/WindowsFormsApp1/bin/Debug/XBEE_Telemetry.exe
 /Users/ericsutton/Desktop/UPDATEDXBeeCode/UCI 10-22-2017/RC Telemetry/WindowsFormsApp1/bin/Debug/XBEE_Telemetry.pdb
+/Users/ericsutton/Documents/GitHub/JouleAnalysisSoftware/WindowsFormsApp1/obj/Debug/XBEE_Accelerometer.csprojResolveAssemblyReference.cache
+/Users/ericsutton/Documents/GitHub/JouleAnalysisSoftware/WindowsFormsApp1/obj/Debug/XBEE_READER.frmMain.resources
+/Users/ericsutton/Documents/GitHub/JouleAnalysisSoftware/WindowsFormsApp1/obj/Debug/XBEE_READER.Properties.Resources.resources
+/Users/ericsutton/Documents/GitHub/JouleAnalysisSoftware/WindowsFormsApp1/obj/Debug/XBEE_READER.ShowLogFile.resources
+/Users/ericsutton/Documents/GitHub/JouleAnalysisSoftware/WindowsFormsApp1/obj/Debug/XBEE_READER.frmSQLRecords.resources
+/Users/ericsutton/Documents/GitHub/JouleAnalysisSoftware/WindowsFormsApp1/obj/Debug/XBEE_Accelerometer.csproj.GenerateResource.Cache
+/Users/ericsutton/Documents/GitHub/JouleAnalysisSoftware/WindowsFormsApp1/obj/Debug/XBEE_Accelerometer.csproj.CoreCompileInputs.cache
+/Users/ericsutton/Documents/GitHub/JouleAnalysisSoftware/WindowsFormsApp1/obj/Debug/XBEE_Telemetry.exe
+/Users/ericsutton/Documents/GitHub/JouleAnalysisSoftware/WindowsFormsApp1/obj/Debug/XBEE_Telemetry.pdb
+/Users/ericsutton/Documents/GitHub/JouleAnalysisSoftware/WindowsFormsApp1/bin/Debug/XBEE_Telemetry.exe.config
+/Users/ericsutton/Documents/GitHub/JouleAnalysisSoftware/WindowsFormsApp1/bin/Debug/XBEE_Telemetry.exe
+/Users/ericsutton/Documents/GitHub/JouleAnalysisSoftware/WindowsFormsApp1/bin/Debug/XBEE_Telemetry.pdb

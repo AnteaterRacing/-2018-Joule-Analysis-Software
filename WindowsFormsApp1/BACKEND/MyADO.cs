@@ -66,9 +66,9 @@ namespace XBEE_READER
             myConn.Close();
 
             //--scratch variables to read each line that starts with X,Y,Z
-            string itemXFromLB = "";
-            string itemYFromLB = "";
-            string itemZFromLB = "";
+            //string itemXFromLB = "";
+            //string itemYFromLB = "";
+            //string itemZFromLB = "";
 
             SqlCommand cmd = new SqlCommand("INSERT INTO Accelerometer (xAxis, yAxis,zAxis) VALUES (@xAxis, @yAxis, @zAxis)", myConn);
             SqlTransaction trans;
