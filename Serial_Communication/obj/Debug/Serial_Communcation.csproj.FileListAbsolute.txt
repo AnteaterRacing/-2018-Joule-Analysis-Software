@@ -1,0 +1,14 @@
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Serial_Communication\bin\Debug\ConsoleApp1.exe.config
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Serial_Communication\bin\Debug\ConsoleApp1.exe
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Serial_Communication\bin\Debug\ConsoleApp1.pdb
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\Serial_Communcation.csprojResolveAssemblyReference.cache
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\Serial_Communcation.csproj.CoreCompileInputs.cache
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\ConsoleApp1.exe
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\ConsoleApp1.pdb
+C:\Users\Preston Rogers\Desktop\Communication\Serial_Communication\bin\Debug\ConsoleApp1.exe.config
+C:\Users\Preston Rogers\Desktop\Communication\Serial_Communication\bin\Debug\ConsoleApp1.exe
+C:\Users\Preston Rogers\Desktop\Communication\Serial_Communication\bin\Debug\ConsoleApp1.pdb
+C:\Users\Preston Rogers\Desktop\Communication\Serial_Communication\obj\Debug\Serial_Communcation.csprojResolveAssemblyReference.cache
+C:\Users\Preston Rogers\Desktop\Communication\Serial_Communication\obj\Debug\Serial_Communcation.csproj.CoreCompileInputs.cache
+C:\Users\Preston Rogers\Desktop\Communication\Serial_Communication\obj\Debug\ConsoleApp1.exe
+C:\Users\Preston Rogers\Desktop\Communication\Serial_Communication\obj\Debug\ConsoleApp1.pdb
