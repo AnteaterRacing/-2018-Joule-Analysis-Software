@@ -38,26 +38,34 @@ namespace SerialTest
                             data[i] = General.XBee.ReadByte();
 
                             Console.Write(data[i]);
+                            WriteOutputToTextFile(data[i], true);
                         }
 
                         Console.WriteLine();
+                        WriteOutputToTextFile(0, false);
                     }
-
 
                 }
 
             }
 
-
             General.XBee.Close();
         }
 
-        static void WriteOutputToTextFile(string _data)
+        static void WriteOutputToTextFile(int _data, bool entering_new_data)
         {
             string FolderName = "C:/Users/Preston Rogers/Desktop/Communication";
-            using (StreamWriter SW = new StreamWriter(FolderName + "\\test.txt", true))   //true makes it append to the file instead of overwrite
+            using (StreamWriter SW = new StreamWriter(FolderName + "\\data.csv", true))   //true makes it append to the file instead of overwrite
             {
-                SW.WriteLine(_data);
+                if (entering_new_data)
+                {
+                    SW.Write(_data + ", ");
+                }
+                else
+                {
+                    SW.WriteLine();
+                }
+                   
                 SW.Close();
             }
         }

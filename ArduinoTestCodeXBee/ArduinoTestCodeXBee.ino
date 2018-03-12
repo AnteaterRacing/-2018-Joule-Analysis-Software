@@ -31,5 +31,5 @@ void loop()
             XBeeSerial.write(y);
       }
     XBeeSerial.print("\n");
-    delay(1000);
+    delay(50);
 }
