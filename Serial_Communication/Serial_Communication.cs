@@ -12,7 +12,6 @@ namespace SerialTest
     class Program
     {
 
-
         static int numberOfSensors = 26;
 
         static void Main(string[] args)
