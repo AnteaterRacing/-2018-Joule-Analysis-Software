@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{6ED28B1B-499B-4505-A74F-E2E5413DCF64}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WindowsFormsApp1/MIDDLE TIER/General.cs">
+    <Files>
+      <File FileName="WindowsFormsApp1/MIDDLE TIER/Communication.cs" Line="46" Column="17" />
+      <File FileName="WindowsFormsApp1/MIDDLE TIER/DataLogger.cs" Line="33" Column="20" />
+      <File FileName="WindowsFormsApp1/MIDDLE TIER/General.cs" Line="19" Column="19" />
+      <File FileName="../../../Desktop/UPDATEDXBeeCode/UCI 10-22-2017/RC Telemetry/WindowsFormsApp1/MIDDLE TIER/DataLogger.cs" Line="1" Column="1" />
+      <File FileName="WindowsFormsApp1/BACKEND/MyADO.cs" Line="69" Column="15" />
+      <File FileName="WindowsFormsApp1/DB_6901_AccelerometerDS.Designer.cs" Line="13" Column="11" />
+      <File FileName="WindowsFormsApp1/FRONT END/frmMain.cs" Line="1" Column="1" />
+      <File FileName="WindowsFormsApp1/FRONT END/frmSQLRecords.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.XBEE__Accelerometer PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
