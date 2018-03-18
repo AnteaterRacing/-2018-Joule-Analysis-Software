@@ -5,38 +5,41 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO.Ports;
 using System.IO;
+using System.Windows.Forms;
 
 
 namespace SerialTest
 {
-    class Program
+    class Program : Form
     {
-
         static int numberOfSensors = 26;
 
-        static void Main(string[] args)
+        public Program()
         {
+            // Initializes COM Port
+            XBee.OpenCOM();
 
-            OpenCOM();
-   
+            // Create GUI
+
+            
             while (true)
             {
                 int[] data = new int[numberOfSensors];
 
                 int readByte;
 
-                if (General.XBee.BytesToRead > 24)
+                if (XBee.XBee1.BytesToRead > 24)
                 {
 
-                    readByte = General.XBee.ReadByte();
-
+                    readByte = XBee.XBee1.ReadByte();
+                    
                     if(readByte == 255)
-                    {
                         for(int i=0; i<numberOfSensors; i++)
                         {
-                            data[i] = General.XBee.ReadByte();
+                            data[i] = XBee.XBee1.ReadByte();
 
                             Console.Write(data[i]);
+                    {
                             WriteOutputToTextFile(data[i], true);
                         }
 
@@ -48,12 +51,12 @@ namespace SerialTest
 
             }
 
-            General.XBee.Close();
+            XBee.XBee1.Close();
         }
 
         static void WriteOutputToTextFile(int _data, bool entering_new_data)
         {
-            string FolderName = "C:/Users/Preston Rogers/Desktop/Communication";
+            string FolderName = "D:/WriteToFolder";
             using (StreamWriter SW = new StreamWriter(FolderName + "\\data.csv", true))   //true makes it append to the file instead of overwrite
             {
                 if (entering_new_data)
@@ -68,34 +71,5 @@ namespace SerialTest
                 SW.Close();
             }
         }
-
-        static bool OpenCOM()
-        {
-            try
-            {
-                General.XBee.PortName = "COM9";
-                General.XBee.BaudRate = 9600;
-                General.XBee.Parity = Parity.None;
-                General.XBee.StopBits = StopBits.One;
-                General.XBee.DataBits = 8;
-                General.XBee.Open();
-
-                return true;
-            }
-            catch (IOException ex)
-            {
-                Console.WriteLine(ex);
-
-                return false;
-            }
-
-        }
-
     }
-    public class General
-    {
-        internal static SerialPort XBee = new SerialPort();
-    }
-
-
 }

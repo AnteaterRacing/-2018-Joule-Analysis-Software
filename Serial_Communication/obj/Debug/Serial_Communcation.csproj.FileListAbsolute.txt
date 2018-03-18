@@ -12,3 +12,10 @@ C:\Users\Preston Rogers\Desktop\Communication\Serial_Communication\obj\Debug\Ser
 C:\Users\Preston Rogers\Desktop\Communication\Serial_Communication\obj\Debug\Serial_Communcation.csproj.CoreCompileInputs.cache
 C:\Users\Preston Rogers\Desktop\Communication\Serial_Communication\obj\Debug\ConsoleApp1.exe
 C:\Users\Preston Rogers\Desktop\Communication\Serial_Communication\obj\Debug\ConsoleApp1.pdb
+D:\GitHub\JouleAnalysisSoftware\Serial_Communication\bin\Debug\ConsoleApp1.exe.config
+D:\GitHub\JouleAnalysisSoftware\Serial_Communication\bin\Debug\ConsoleApp1.exe
+D:\GitHub\JouleAnalysisSoftware\Serial_Communication\bin\Debug\ConsoleApp1.pdb
+D:\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\Serial_Communcation.csprojResolveAssemblyReference.cache
+D:\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\Serial_Communcation.csproj.CoreCompileInputs.cache
+D:\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\ConsoleApp1.exe
+D:\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\ConsoleApp1.pdb
