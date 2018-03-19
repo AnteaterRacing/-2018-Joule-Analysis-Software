@@ -32,14 +32,15 @@ namespace SerialTest
                 {
 
                     readByte = XBee.XBee1.ReadByte();
-                    
-                    if(readByte == 255)
-                        for(int i=0; i<numberOfSensors; i++)
+
+                    if (readByte == 255)
+                    {
+                        for (int i = 0; i < numberOfSensors; i++)
                         {
                             data[i] = XBee.XBee1.ReadByte();
 
                             Console.Write(data[i]);
-                    {
+
                             WriteOutputToTextFile(data[i], true);
                         }
 

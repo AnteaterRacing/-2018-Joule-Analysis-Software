@@ -19,3 +19,5 @@ D:\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\Serial_Communcati
 D:\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\Serial_Communcation.csproj.CoreCompileInputs.cache
 D:\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\ConsoleApp1.exe
 D:\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\ConsoleApp1.pdb
+D:\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\ConsoleApp1.GUI.resources
+D:\GitHub\JouleAnalysisSoftware\Serial_Communication\obj\Debug\Serial_Communcation.csproj.GenerateResource.Cache
