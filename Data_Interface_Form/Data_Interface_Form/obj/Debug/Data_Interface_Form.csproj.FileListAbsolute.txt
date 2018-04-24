@@ -1,0 +1,13 @@
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\Data_Interface_Form.exe.config
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\Data_Interface_Form.exe
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\Data_Interface_Form.pdb
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.csprojResolveAssemblyReference.cache
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.MainForm.resources
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.Properties.Resources.resources
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.csproj.GenerateResource.Cache
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.csproj.CoreCompileInputs.cache
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.exe
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.pdb
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\SensorDatabase.mdf
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\SensorDatabase_log.ldf
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.VisualDisplayForm.resources
