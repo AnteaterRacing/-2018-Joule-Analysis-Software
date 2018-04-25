@@ -41,32 +41,36 @@ namespace Data_Interface_Form
                 if(General.XBee.IsOpen)
                 {
 
-                    int[] data = new int[General.numberOfSensors];
+                    char[] data = new char[General.numberOfSensors];
+
+                    int[] dataInt = new int[General.numberOfSensors];
 
                     int readByte;
 
                     if (General.XBee.BytesToRead > 0)
                     {
-
                         readByte = General.XBee.ReadByte();
 
                         if (readByte == 255)
                         {
                             General.rawReadings.Add(255);
+                            General.XBee.Read(data, 0, General.numberOfSensors);
 
                             for (int i = 0; i < General.numberOfSensors; i++)
                             {
-                                data[i] = General.XBee.ReadByte();
+                                //data[i] = General.XBee.ReadByte();
+
+                                dataInt[i] = Convert.ToInt32(data[i].ToString());
 
                                 //Add the incoming data to the long integer list of rawreadings
-                                General.rawReadings.Add(data[i]);
+                                General.rawReadings.Add(dataInt[i]);
 
-                                WriteOutputToTextFile(data[i], true);
                             }
+                            setSensorValues(dataInt);
 
-                            setSensorValues(data);
+                            WriteOutputToTextFile(dataInt, true);
 
-                            WriteOutputToTextFile(0, false);
+                            WriteOutputToTextFile(dataInt, false);
                         }
                     }
 
@@ -143,7 +147,7 @@ namespace Data_Interface_Form
         #region Optional Code for writing data to CSV file
 
         //Below is optional code for writing to a csv file
-        static void WriteOutputToTextFile(int _data, bool entering_new_data)
+        static void WriteOutputToTextFile(int[] _data, bool entering_new_data)
         {
             string dateForCSV = General.startTime;
 
@@ -152,7 +156,11 @@ namespace Data_Interface_Form
             {
                 if (entering_new_data)
                 {
-                    SW.Write(_data + ", ");
+                    for (int i = 0; i < General.numberOfSensors; i++)
+                    {
+                        SW.Write(_data[i] + ", ");
+                    }
+
                 }
                 else
                 {
