@@ -298,5 +298,11 @@ namespace Data_Interface_Form
 
         }
 
+        private void csvTimer_Tick(object sender, EventArgs e)
+        {
+            Communication.WriteOutputToTextFile(General.dataForCsv);
+
+            General.dataForCsv.Clear();
+        }
     }
 }

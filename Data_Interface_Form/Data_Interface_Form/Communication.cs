@@ -64,13 +64,9 @@ namespace Data_Interface_Form
 
                                 //Add the incoming data to the long integer list of rawreadings
                                 General.rawReadings.Add(dataInt[i]);
-
+                                General.dataForCsv.Add(dataInt[i]);
                             }
                             setSensorValues(dataInt);
-
-                            WriteOutputToTextFile(dataInt, true);
-
-                            WriteOutputToTextFile(dataInt, false);
                         }
                     }
 
@@ -147,23 +143,20 @@ namespace Data_Interface_Form
         #region Optional Code for writing data to CSV file
 
         //Below is optional code for writing to a csv file
-        static void WriteOutputToTextFile(int[] _data, bool entering_new_data)
+        internal static void WriteOutputToTextFile(List<int> dataForCsv)
         {
             string dateForCSV = General.startTime;
 
             string FolderName = "C:/Users/Preston Rogers/Desktop/Communication";
             using (StreamWriter SW = new StreamWriter(FolderName + "\\data_" + dateForCSV + ".csv", true))   //true makes it append to the file instead of overwrite
             {
-                if (entering_new_data)
+                for (int i = 0; i < dataForCsv.Count; i++)
                 {
-                    for (int i = 0; i < General.numberOfSensors; i++)
+                    for (int j = 0; j < General.numberOfSensors; j++)
                     {
-                        SW.Write(_data[i] + ", ");
+                        SW.Write(dataForCsv[i] + ", ");
                     }
 
-                }
-                else
-                {
                     SW.WriteLine();
                 }
 

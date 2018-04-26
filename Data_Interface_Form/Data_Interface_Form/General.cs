@@ -19,6 +19,7 @@ namespace Data_Interface_Form
         internal static string MSGTITLE = "UCI Race Car Telemetry";
 
         internal static List<int> rawReadings = new List<int>();
+        internal static List<int> dataForCsv = new List<int>();
 
         //Below is used for graphing to see how long it has been
         internal static Stopwatch elapsedTime = new Stopwatch();
