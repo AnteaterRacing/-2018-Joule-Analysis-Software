@@ -66,6 +66,10 @@ namespace Data_Interface_Form
                                 General.rawReadings.Add(dataInt[i]);
                                 General.dataForCsv.Add(dataInt[i]);
                             }
+
+                            //To get the timing of each data point
+                            General.dataForCsv.Add((int)General.elapsedTime.ElapsedMilliseconds);
+
                             setSensorValues(dataInt);
                         }
                     }
@@ -150,9 +154,11 @@ namespace Data_Interface_Form
             string FolderName = "C:/Users/Preston Rogers/Desktop/Communication";
             using (StreamWriter SW = new StreamWriter(FolderName + "\\data_" + dateForCSV + ".csv", true))   //true makes it append to the file instead of overwrite
             {
-                for (int i = 0; i < dataForCsv.Count; i++)
+                //Divided by number of Sensors + 1 to acccount for the sensors and timing information
+                for (int i = 0; i < (dataForCsv.Count/(General.numberOfSensors + 1)); i++)
                 {
-                    for (int j = 0; j < General.numberOfSensors; j++)
+                    // The "+ 1" is to account for the millisecond timing information in the csv file
+                    for (int j = 0; j < (General.numberOfSensors + 1); j++)
                     {
                         SW.Write(dataForCsv[i] + ", ");
                     }
