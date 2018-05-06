@@ -157,7 +157,7 @@ namespace Data_Interface_Form
                 //Divided by number of Sensors + 1 to acccount for the sensors and timing information
                 for (int i = 0; i < (dataForCsv.Count/(General.numberOfSensors + 1)); i++)
                 {
-                    // The "+ 1" is to account for the millisecond timing information in the csv file
+                    // The "+ 1" is to account for the millisecond timing information for each data set
                     for (int j = 0; j < (General.numberOfSensors + 1); j++)
                     {
                         SW.Write(dataForCsv[i] + ", ");

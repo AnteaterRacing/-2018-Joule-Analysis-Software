@@ -243,61 +243,6 @@ namespace Data_Interface_Form
             }
         }
 
-        private void comLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tireTempTab_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void motorTempTab_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MT_chart_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void wheelSpeedTab_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void WS_chart_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void infoLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void scrollCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TTBR_chart_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SensorTabs_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void csvTimer_Tick(object sender, EventArgs e)
         {
             Communication.WriteOutputToTextFile(General.dataForCsv);
