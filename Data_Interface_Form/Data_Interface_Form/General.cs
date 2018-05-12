@@ -100,14 +100,11 @@ namespace Data_Interface_Form
         internal static int packVoltage { get; set; }
         internal static int packCurrent { get; set; }
         internal static int packTemperature { get; set; }
+        internal static int packCharge { get; set; }
 
 
-        // Steering angle sensor data
+        // Steering and brake angle
         internal static int steeringAngle { get; set; }
-
-
-        // Accelerator and brake angle
-        internal static int accelAngle { get; set; }
         internal static int brakeAngle { get; set; }
         #endregion
 

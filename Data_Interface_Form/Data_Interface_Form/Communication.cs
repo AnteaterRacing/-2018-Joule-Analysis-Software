@@ -125,14 +125,10 @@ namespace Data_Interface_Form
             General.packCurrent = (int)map(sensorData[21], 0, 255, 0, 500);
             // We do not know the ranges for the pack Temperatre currently
             General.packTemperature = sensorData[22];
+            General.packCharge = sensorData[23];
 
-
-            // Steering angle being set
-            General.steeringAngle = sensorData[23];
-
-
-            // Accelerator and brake angle being set
-            General.accelAngle = sensorData[24];
+            // Steering and brake angle being set
+            General.steeringAngle = sensorData[24];
             General.brakeAngle = sensorData[25];
         }
 
