@@ -28,10 +28,16 @@ namespace Data_Interface_Form
 
         internal static int chartSpeed { get; set; }
 
+        internal static int numberOfSensors = 26;
+
+        internal static byte[] data = new byte[General.numberOfSensors];
+        internal static int[] dataInt = new int[General.numberOfSensors];
+
         internal static string ChosenComPort { get; set; }
         internal static bool ConnectedToCom { get; set; }
         internal static bool ReadingFromTheStream { get; set; }
         internal static bool RunThatBgDataWorker { get; set; }
+        internal static bool AllowCsvWriting { get; set; }
 
         internal static string ConnectedMsg
         {
@@ -53,7 +59,7 @@ namespace Data_Interface_Form
 
         #region All of the sensor variable names
         //make sure you put the correct number of sensors
-        internal static int numberOfSensors = 26;
+        
 
         // Tire temperature sensor data
         internal static int TTBR1 { get; set; }

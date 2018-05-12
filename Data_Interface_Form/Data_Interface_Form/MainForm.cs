@@ -119,11 +119,12 @@ namespace Data_Interface_Form
 
                 //dataTimer used to get information in a periodic fashion
                 
-                General.startTime = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss");
+                General.startTime = DateTime.Now.ToString("M-dd-yyyy--HH-mm-ss");
                 General.elapsedTime.Start();
                 General.RunThatBgDataWorker = true;
                 bgWorkerDataFlow.RunWorkerAsync();
                 dataTimer.Start();
+                csvTimer.Start();
             }
         }
 
@@ -135,6 +136,7 @@ namespace Data_Interface_Form
 
             sqlSaveBtn.Enabled = true;
 
+            dataTimer.Enabled = false;
             dataTimer.Enabled = false;
             General.elapsedTime.Stop();
 
@@ -200,7 +202,6 @@ namespace Data_Interface_Form
 
         private void dataTimer_Tick(object sender, EventArgs e)
         {
-            //Communication.GetInfoFromCOM();
             General.mainFormAddress.UpdateGUI();
         }
 
@@ -245,9 +246,15 @@ namespace Data_Interface_Form
 
         private void csvTimer_Tick(object sender, EventArgs e)
         {
-            Communication.WriteOutputToTextFile(General.dataForCsv);
+
+            //This if statement is just to make sure that the first 3 data points are all zero for this is really unlikely
+            if (General.AllowCsvWriting == true)
+            {
+                Communication.WriteOutputToTextFile(General.dataForCsv);
+            }
 
             General.dataForCsv.Clear();
+            General.AllowCsvWriting = false;
         }
     }
 }

@@ -41,9 +41,9 @@ namespace Data_Interface_Form
                 if(General.XBee.IsOpen)
                 {
 
-                    char[] data = new char[General.numberOfSensors];
+                    //byte[] data = new byte[General.numberOfSensors];
 
-                    int[] dataInt = new int[General.numberOfSensors];
+                    //int[] dataInt = new int[General.numberOfSensors];
 
                     int readByte;
 
@@ -54,23 +54,26 @@ namespace Data_Interface_Form
                         if (readByte == 255)
                         {
                             General.rawReadings.Add(255);
-                            General.XBee.Read(data, 0, General.numberOfSensors);
+                            General.XBee.Read(General.data, 0, General.numberOfSensors);
+
+                            //This is to make sure there will be information to put on Csv
+                            General.AllowCsvWriting = true;
 
                             for (int i = 0; i < General.numberOfSensors; i++)
                             {
                                 //data[i] = General.XBee.ReadByte();
 
-                                dataInt[i] = Convert.ToInt32(data[i].ToString());
+                                General.dataInt[i] = Convert.ToInt32(General.data[i].ToString());
 
                                 //Add the incoming data to the long integer list of rawreadings
-                                General.rawReadings.Add(dataInt[i]);
-                                General.dataForCsv.Add(dataInt[i]);
+                                General.rawReadings.Add(General.dataInt[i]);
+                                General.dataForCsv.Add(General.dataInt[i]);
                             }
 
                             //To get the timing of each data point
                             General.dataForCsv.Add((int)General.elapsedTime.ElapsedMilliseconds);
 
-                            setSensorValues(dataInt);
+                            setSensorValues(General.dataInt);
                         }
                     }
 
@@ -134,9 +137,11 @@ namespace Data_Interface_Form
         }
 
         #region calculations for sensor data
-        public static double convertToTemp(int voltageValue)
+        public static double convertToTemp(int voltageADC)
         {
-            return (Math.Log(voltageValue / 1.25) / Math.Log(1.0087));
+            double voltage = (voltageADC / 255.0) * (5.0);
+
+            return (Math.Log( voltage / 1.25) / Math.Log(1.0087));
         }
         public static float map(this float value, float from1, float to1, float from2, float to2)
         {
@@ -155,15 +160,14 @@ namespace Data_Interface_Form
             using (StreamWriter SW = new StreamWriter(FolderName + "\\data_" + dateForCSV + ".csv", true))   //true makes it append to the file instead of overwrite
             {
                 //Divided by number of Sensors + 1 to acccount for the sensors and timing information
-                for (int i = 0; i < (dataForCsv.Count/(General.numberOfSensors + 1)); i++)
+                for (int i = 0; i < dataForCsv.Count; i++)
                 {
-                    // The "+ 1" is to account for the millisecond timing information for each data set
-                    for (int j = 0; j < (General.numberOfSensors + 1); j++)
+                    if (i % (General.numberOfSensors+1) == 0)
                     {
-                        SW.Write(dataForCsv[i] + ", ");
+                        SW.WriteLine();
                     }
 
-                    SW.WriteLine();
+                    SW.Write(dataForCsv[i] + ", ");
                 }
 
                 SW.Close();
