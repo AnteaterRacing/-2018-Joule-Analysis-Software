@@ -75,7 +75,7 @@ namespace Data_Interface_Form
                 TTBR_chart.ChartAreas[0].AxisX.Minimum = (double)currentElapsedTime - General.chartSpeed;
                 MT_chart.ChartAreas[0].AxisX.Minimum = (double)currentElapsedTime - General.chartSpeed;
                 WS_chart.ChartAreas[0].AxisX.Minimum = (double)currentElapsedTime - General.chartSpeed;
-                SB_chart.ChartAreas[0].AxisX.Minimum = (double)currentElapsedTime - General.chartSpeed;
+                TB_chart.ChartAreas[0].AxisX.Minimum = (double)currentElapsedTime - General.chartSpeed;
 
             }
             else
@@ -83,7 +83,8 @@ namespace Data_Interface_Form
                 TTBR_chart.ChartAreas[0].AxisX.Minimum = 0;
                 MT_chart.ChartAreas[0].AxisX.Minimum = 0;
                 WS_chart.ChartAreas[0].AxisX.Minimum = 0;
-                SB_chart.ChartAreas[0].AxisX.Minimum = 0;
+                TB_chart.ChartAreas[0].AxisX.Minimum = 0;
+
             }
 
             TTBR_chart.Series["TTBR1"].Points.AddXY(currentElapsedTime, General.TTBR1);
@@ -103,8 +104,9 @@ namespace Data_Interface_Form
             WS_chart.Series["WSBL"].Points.AddXY(currentElapsedTime, General.WSBL);
             WS_chart.Series["WSBR"].Points.AddXY(currentElapsedTime, General.WSBR);
 
-            SB_chart.Series["Steering"].Points.AddXY(currentElapsedTime, General.steeringAngle);
-            SB_chart.Series["Brake"].Points.AddXY(currentElapsedTime, General.brakeAngle);
+            TB_chart.Series["Brake"].Points.AddXY(currentElapsedTime, General.brakeAngle);
+            TB_chart.Series["ThrottleL"].Points.AddXY(currentElapsedTime, General.throttleL);
+            TB_chart.Series["ThrottleR"].Points.AddXY(currentElapsedTime, General.throttleR);
         }
 
         private void cboPorts_SelectedIndexChanged(object sender, EventArgs e)

@@ -51,6 +51,7 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.streamStartBtn = new System.Windows.Forms.Button();
             this.streamStopBtn = new System.Windows.Forms.Button();
             this.cboPorts = new System.Windows.Forms.ComboBox();
@@ -75,8 +76,8 @@
             this.displayVisualBtn = new System.Windows.Forms.Button();
             this.bgWorkerDataFlow = new System.ComponentModel.BackgroundWorker();
             this.csvTimer = new System.Windows.Forms.Timer(this.components);
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.SB_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.abTab = new System.Windows.Forms.TabPage();
+            this.TB_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.SensorTabs.SuspendLayout();
             this.tireTempTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TTBR_chart)).BeginInit();
@@ -84,8 +85,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.MT_chart)).BeginInit();
             this.wheelSpeedTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WS_chart)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SB_chart)).BeginInit();
+            this.abTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TB_chart)).BeginInit();
             this.SuspendLayout();
             // 
             // streamStartBtn
@@ -139,7 +140,7 @@
             this.SensorTabs.Controls.Add(this.tireTempTab);
             this.SensorTabs.Controls.Add(this.motorTempTab);
             this.SensorTabs.Controls.Add(this.wheelSpeedTab);
-            this.SensorTabs.Controls.Add(this.tabPage1);
+            this.SensorTabs.Controls.Add(this.abTab);
             this.SensorTabs.Location = new System.Drawing.Point(12, 12);
             this.SensorTabs.Name = "SensorTabs";
             this.SensorTabs.SelectedIndex = 0;
@@ -403,40 +404,45 @@
             this.csvTimer.Interval = 1000;
             this.csvTimer.Tick += new System.EventHandler(this.csvTimer_Tick);
             // 
-            // tabPage1
+            // abTab
             // 
-            this.tabPage1.Controls.Add(this.SB_chart);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1113, 506);
-            this.tabPage1.TabIndex = 3;
-            this.tabPage1.Text = "Accel/Brake";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.abTab.Controls.Add(this.TB_chart);
+            this.abTab.Location = new System.Drawing.Point(4, 29);
+            this.abTab.Name = "abTab";
+            this.abTab.Size = new System.Drawing.Size(1113, 506);
+            this.abTab.TabIndex = 3;
+            this.abTab.Text = "Throttle/ Brake";
+            this.abTab.UseVisualStyleBackColor = true;
             // 
-            // SB_chart
+            // TB_chart
             // 
-            this.SB_chart.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.TB_chart.BackColor = System.Drawing.Color.PaleTurquoise;
             chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.Silver;
             chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
             chartArea4.Name = "ChartArea1";
-            this.SB_chart.ChartAreas.Add(chartArea4);
+            this.TB_chart.ChartAreas.Add(chartArea4);
             legend4.Name = "Legend1";
-            this.SB_chart.Legends.Add(legend4);
-            this.SB_chart.Location = new System.Drawing.Point(1, -1);
-            this.SB_chart.Name = "SB_chart";
+            this.TB_chart.Legends.Add(legend4);
+            this.TB_chart.Location = new System.Drawing.Point(1, -1);
+            this.TB_chart.Name = "TB_chart";
             series13.ChartArea = "ChartArea1";
             series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series13.Legend = "Legend1";
-            series13.Name = "Steering";
+            series13.Name = "Brake";
             series14.ChartArea = "ChartArea1";
             series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series14.Legend = "Legend1";
-            series14.Name = "Brake";
-            this.SB_chart.Series.Add(series13);
-            this.SB_chart.Series.Add(series14);
-            this.SB_chart.Size = new System.Drawing.Size(1110, 509);
-            this.SB_chart.TabIndex = 4;
-            this.SB_chart.Text = "chart2";
+            series14.Name = "ThrottleL";
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series15.Legend = "Legend1";
+            series15.Name = "ThrottleR";
+            this.TB_chart.Series.Add(series13);
+            this.TB_chart.Series.Add(series14);
+            this.TB_chart.Series.Add(series15);
+            this.TB_chart.Size = new System.Drawing.Size(1110, 509);
+            this.TB_chart.TabIndex = 4;
+            this.TB_chart.Text = "chart2";
             // 
             // MainForm
             // 
@@ -469,8 +475,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.MT_chart)).EndInit();
             this.wheelSpeedTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.WS_chart)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SB_chart)).EndInit();
+            this.abTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TB_chart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,8 +508,8 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart TTBR_chart;
         private System.Windows.Forms.DataVisualization.Charting.Chart MT_chart;
         private System.Windows.Forms.DataVisualization.Charting.Chart WS_chart;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart SB_chart;
+        private System.Windows.Forms.TabPage abTab;
+        private System.Windows.Forms.DataVisualization.Charting.Chart TB_chart;
     }
 }
 
