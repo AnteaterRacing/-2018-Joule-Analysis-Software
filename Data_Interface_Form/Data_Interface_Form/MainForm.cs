@@ -9,6 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Diagnostics;
+using Excel = Microsoft.Office.Interop.Excel;
+// THE ABOVE USING IS ESSENTIAL!!!! You must look for this interop that is downloaded directly on 
+// your computer when you get Microsoft Office.
+// I added it by going to references -> right click -> add reference -> browse 
+// -> browsed for C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c
+
 
 namespace Data_Interface_Form
 {
@@ -61,14 +67,15 @@ namespace Data_Interface_Form
 
         public void UpdateGUI()
         {
-            decimal currentElapsedTime = General.elapsedTime.ElapsedMilliseconds/1000;
+            double currentElapsedTime = (double)General.elapsedTime.ElapsedMilliseconds/1000.0;
 
             //Below allows for scrolling of the graph with greater General.chartSpeed values leading to slower scrolling
             if (scrollCheckBox.Checked)
             {
-                TTBR_chart.ChartAreas[0].AxisX.Minimum = (int)currentElapsedTime - General.chartSpeed;
-                MT_chart.ChartAreas[0].AxisX.Minimum = (int)currentElapsedTime - General.chartSpeed;
-                WS_chart.ChartAreas[0].AxisX.Minimum = (int)currentElapsedTime - General.chartSpeed;
+                TTBR_chart.ChartAreas[0].AxisX.Minimum = (double)currentElapsedTime - General.chartSpeed;
+                MT_chart.ChartAreas[0].AxisX.Minimum = (double)currentElapsedTime - General.chartSpeed;
+                WS_chart.ChartAreas[0].AxisX.Minimum = (double)currentElapsedTime - General.chartSpeed;
+                SB_chart.ChartAreas[0].AxisX.Minimum = (double)currentElapsedTime - General.chartSpeed;
 
             }
             else
@@ -76,11 +83,17 @@ namespace Data_Interface_Form
                 TTBR_chart.ChartAreas[0].AxisX.Minimum = 0;
                 MT_chart.ChartAreas[0].AxisX.Minimum = 0;
                 WS_chart.ChartAreas[0].AxisX.Minimum = 0;
+                SB_chart.ChartAreas[0].AxisX.Minimum = 0;
             }
 
             TTBR_chart.Series["TTBR1"].Points.AddXY(currentElapsedTime, General.TTBR1);
             TTBR_chart.Series["TTBR2"].Points.AddXY(currentElapsedTime, General.TTBR2);
             TTBR_chart.Series["TTBR3"].Points.AddXY(currentElapsedTime, General.TTBR3);
+
+            TTBR_chart.Series["TTBR1"].Points.AddXY(currentElapsedTime, General.TTBL1);
+            TTBR_chart.Series["TTBR2"].Points.AddXY(currentElapsedTime, General.TTBL2);
+            TTBR_chart.Series["TTBR3"].Points.AddXY(currentElapsedTime, General.TTBL3);
+
 
             MT_chart.Series["MT1"].Points.AddXY(currentElapsedTime, General.MT1);
             MT_chart.Series["MT2"].Points.AddXY(currentElapsedTime, General.MT2);
@@ -89,6 +102,9 @@ namespace Data_Interface_Form
             WS_chart.Series["WSFR"].Points.AddXY(currentElapsedTime, General.WSFR);
             WS_chart.Series["WSBL"].Points.AddXY(currentElapsedTime, General.WSBL);
             WS_chart.Series["WSBR"].Points.AddXY(currentElapsedTime, General.WSBR);
+
+            SB_chart.Series["Steering"].Points.AddXY(currentElapsedTime, General.steeringAngle);
+            SB_chart.Series["Brake"].Points.AddXY(currentElapsedTime, General.brakeAngle);
         }
 
         private void cboPorts_SelectedIndexChanged(object sender, EventArgs e)
@@ -122,6 +138,7 @@ namespace Data_Interface_Form
                 General.startTime = DateTime.Now.ToString("M-dd-yyyy--HH-mm-ss");
                 General.elapsedTime.Start();
                 General.RunThatBgDataWorker = true;
+           
                 bgWorkerDataFlow.RunWorkerAsync();
                 dataTimer.Start();
                 csvTimer.Start();

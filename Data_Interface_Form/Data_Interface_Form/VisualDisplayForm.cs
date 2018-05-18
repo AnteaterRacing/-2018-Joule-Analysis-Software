@@ -118,8 +118,8 @@ namespace Data_Interface_Form
             decimal x_fr2 = (decimal)(((double)(General.TTFR2)) / 200.0);
             decimal x_fr3 = (decimal)(((double)(General.TTFR3)) / 200.0);
 
-            decimal x_rl1 = (decimal)(/*((double)(General.TTBL1))*/150.0 / 200.0);
-            decimal x_rl2 = (decimal)(/*((double)(General.TTBL2))*/180.0 / 200.0);
+            decimal x_rl1 = (decimal)(((double)(General.TTBL1)) / 200.0);
+            decimal x_rl2 = (decimal)(((double)(General.TTBL2)) / 200.0);
             decimal x_rl3 = (decimal)(((double)(General.TTBL3)) / 200.0);
 
             decimal x_rr1 = (decimal)(((double)(General.TTBR1)) / 200.0);

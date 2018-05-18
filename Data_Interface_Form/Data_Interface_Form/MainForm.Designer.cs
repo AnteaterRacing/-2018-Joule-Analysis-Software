@@ -34,16 +34,23 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.streamStartBtn = new System.Windows.Forms.Button();
             this.streamStopBtn = new System.Windows.Forms.Button();
             this.cboPorts = new System.Windows.Forms.ComboBox();
@@ -68,6 +75,8 @@
             this.displayVisualBtn = new System.Windows.Forms.Button();
             this.bgWorkerDataFlow = new System.ComponentModel.BackgroundWorker();
             this.csvTimer = new System.Windows.Forms.Timer(this.components);
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.SB_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.SensorTabs.SuspendLayout();
             this.tireTempTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TTBR_chart)).BeginInit();
@@ -75,6 +84,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.MT_chart)).BeginInit();
             this.wheelSpeedTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WS_chart)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SB_chart)).BeginInit();
             this.SuspendLayout();
             // 
             // streamStartBtn
@@ -128,6 +139,7 @@
             this.SensorTabs.Controls.Add(this.tireTempTab);
             this.SensorTabs.Controls.Add(this.motorTempTab);
             this.SensorTabs.Controls.Add(this.wheelSpeedTab);
+            this.SensorTabs.Controls.Add(this.tabPage1);
             this.SensorTabs.Location = new System.Drawing.Point(12, 12);
             this.SensorTabs.Name = "SensorTabs";
             this.SensorTabs.SelectedIndex = 0;
@@ -148,12 +160,15 @@
             // TTBR_chart
             // 
             this.TTBR_chart.BackColor = System.Drawing.Color.Khaki;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
             chartArea1.Name = "ChartArea1";
             this.TTBR_chart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.TTBR_chart.Legends.Add(legend1);
             this.TTBR_chart.Location = new System.Drawing.Point(1, -1);
             this.TTBR_chart.Name = "TTBR_chart";
+            series1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
@@ -166,9 +181,24 @@
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series3.Legend = "Legend1";
             series3.Name = "TTBR3";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series4.Legend = "Legend1";
+            series4.Name = "TTBL1";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.Name = "TTBL2";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.Name = "TTBL3";
             this.TTBR_chart.Series.Add(series1);
             this.TTBR_chart.Series.Add(series2);
             this.TTBR_chart.Series.Add(series3);
+            this.TTBR_chart.Series.Add(series4);
+            this.TTBR_chart.Series.Add(series5);
+            this.TTBR_chart.Series.Add(series6);
             this.TTBR_chart.Size = new System.Drawing.Size(1110, 509);
             this.TTBR_chart.TabIndex = 1;
             this.TTBR_chart.Text = "chart1";
@@ -187,22 +217,24 @@
             // MT_chart
             // 
             this.MT_chart.BackColor = System.Drawing.Color.Wheat;
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
             chartArea2.Name = "ChartArea1";
             this.MT_chart.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.MT_chart.Legends.Add(legend2);
             this.MT_chart.Location = new System.Drawing.Point(1, -1);
             this.MT_chart.Name = "MT_chart";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "MT1";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Legend = "Legend1";
-            series5.Name = "MT2";
-            this.MT_chart.Series.Add(series4);
-            this.MT_chart.Series.Add(series5);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Legend = "Legend1";
+            series7.Name = "MT1";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Legend = "Legend1";
+            series8.Name = "MT2";
+            this.MT_chart.Series.Add(series7);
+            this.MT_chart.Series.Add(series8);
             this.MT_chart.Size = new System.Drawing.Size(1110, 509);
             this.MT_chart.TabIndex = 2;
             this.MT_chart.Text = "chart2";
@@ -220,32 +252,34 @@
             // WS_chart
             // 
             this.WS_chart.BackColor = System.Drawing.Color.Bisque;
+            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
             chartArea3.Name = "ChartArea1";
             this.WS_chart.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.WS_chart.Legends.Add(legend3);
             this.WS_chart.Location = new System.Drawing.Point(1, -1);
             this.WS_chart.Name = "WS_chart";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Legend = "Legend1";
-            series6.Name = "WSFL";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Legend = "Legend1";
-            series7.Name = "WSFR";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Legend = "Legend1";
-            series8.Name = "WSBL";
             series9.ChartArea = "ChartArea1";
             series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series9.Legend = "Legend1";
-            series9.Name = "WSBR";
-            this.WS_chart.Series.Add(series6);
-            this.WS_chart.Series.Add(series7);
-            this.WS_chart.Series.Add(series8);
+            series9.Name = "WSFL";
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series10.Legend = "Legend1";
+            series10.Name = "WSFR";
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series11.Legend = "Legend1";
+            series11.Name = "WSBL";
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series12.Legend = "Legend1";
+            series12.Name = "WSBR";
             this.WS_chart.Series.Add(series9);
+            this.WS_chart.Series.Add(series10);
+            this.WS_chart.Series.Add(series11);
+            this.WS_chart.Series.Add(series12);
             this.WS_chart.Size = new System.Drawing.Size(1110, 509);
             this.WS_chart.TabIndex = 3;
             this.WS_chart.Text = "chart2";
@@ -369,6 +403,41 @@
             this.csvTimer.Interval = 1000;
             this.csvTimer.Tick += new System.EventHandler(this.csvTimer_Tick);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.SB_chart);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1113, 506);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = "Accel/Brake";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // SB_chart
+            // 
+            this.SB_chart.BackColor = System.Drawing.Color.PaleTurquoise;
+            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea4.Name = "ChartArea1";
+            this.SB_chart.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.SB_chart.Legends.Add(legend4);
+            this.SB_chart.Location = new System.Drawing.Point(1, -1);
+            this.SB_chart.Name = "SB_chart";
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series13.Legend = "Legend1";
+            series13.Name = "Steering";
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series14.Legend = "Legend1";
+            series14.Name = "Brake";
+            this.SB_chart.Series.Add(series13);
+            this.SB_chart.Series.Add(series14);
+            this.SB_chart.Size = new System.Drawing.Size(1110, 509);
+            this.SB_chart.TabIndex = 4;
+            this.SB_chart.Text = "chart2";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -400,6 +469,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.MT_chart)).EndInit();
             this.wheelSpeedTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.WS_chart)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SB_chart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,6 +502,8 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart TTBR_chart;
         private System.Windows.Forms.DataVisualization.Charting.Chart MT_chart;
         private System.Windows.Forms.DataVisualization.Charting.Chart WS_chart;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart SB_chart;
     }
 }
 

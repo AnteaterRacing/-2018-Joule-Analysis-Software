@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.IO.Ports;
 using System.IO;
 
+using Excel = Microsoft.Office.Interop.Excel;
+
 namespace Data_Interface_Form
 {
     static class Communication
@@ -59,6 +61,9 @@ namespace Data_Interface_Form
                             //This is to make sure there will be information to put on Csv
                             General.AllowCsvWriting = true;
 
+                            //To get the timing of each data point
+                            General.dataForCsv.Add((int)General.elapsedTime.ElapsedMilliseconds);
+
                             for (int i = 0; i < General.numberOfSensors; i++)
                             {
                                 //data[i] = General.XBee.ReadByte();
@@ -70,14 +75,9 @@ namespace Data_Interface_Form
                                 General.dataForCsv.Add(General.dataInt[i]);
                             }
 
-                            //To get the timing of each data point
-                            General.dataForCsv.Add((int)General.elapsedTime.ElapsedMilliseconds);
-
                             setSensorValues(General.dataInt);
                         }
                     }
-
-                    //General.mainFormAddress.UpdateGUI();
                 }
             }
         }
@@ -106,7 +106,6 @@ namespace Data_Interface_Form
 
             General.MT1 = (int)convertToTemp(sensorData[12]);
             General.MT2 = (int)convertToTemp(sensorData[13]);
-
 
             // Wheel speed sensor data being set
             General.WSBR = (int)map(sensorData[14], 0, 255, 0, 54);
@@ -137,7 +136,12 @@ namespace Data_Interface_Form
         {
             double voltage = (voltageADC / 255.0) * (5.0);
 
-            return (Math.Log( voltage / 1.25) / Math.Log(1.0087));
+            double temperature = Math.Log(voltage / 1.25) / Math.Log(1.0087);
+
+            //Below is a conditional in case temperature is a low number
+            temperature = (temperature < 0) ? -10.0 : temperature;
+
+            return temperature;
         }
         public static float map(this float value, float from1, float to1, float from2, float to2)
         {
@@ -153,6 +157,7 @@ namespace Data_Interface_Form
             string dateForCSV = General.startTime;
 
             string FolderName = "C:/Users/Preston Rogers/Desktop/Communication";
+
             using (StreamWriter SW = new StreamWriter(FolderName + "\\data_" + dateForCSV + ".csv", true))   //true makes it append to the file instead of overwrite
             {
                 //Divided by number of Sensors + 1 to acccount for the sensors and timing information
