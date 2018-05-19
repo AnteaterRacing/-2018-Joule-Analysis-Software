@@ -87,13 +87,13 @@ namespace Data_Interface_Form
 
             }
 
-            TTBR_chart.Series["TTBR1"].Points.AddXY(currentElapsedTime, General.TTBR1);
-            TTBR_chart.Series["TTBR2"].Points.AddXY(currentElapsedTime, General.TTBR2);
-            TTBR_chart.Series["TTBR3"].Points.AddXY(currentElapsedTime, General.TTBR3);
+            TTBR_chart.Series["TTBR inner"].Points.AddXY(currentElapsedTime, General.TTBR1);
+            TTBR_chart.Series["TTBR middle"].Points.AddXY(currentElapsedTime, General.TTBR2);
+            TTBR_chart.Series["TTBR outer"].Points.AddXY(currentElapsedTime, General.TTBR3);
 
-            TTBR_chart.Series["TTBR1"].Points.AddXY(currentElapsedTime, General.TTBL1);
-            TTBR_chart.Series["TTBR2"].Points.AddXY(currentElapsedTime, General.TTBL2);
-            TTBR_chart.Series["TTBR3"].Points.AddXY(currentElapsedTime, General.TTBL3);
+            TTBR_chart.Series["TTBR inner"].Points.AddXY(currentElapsedTime, General.TTBL1);
+            TTBR_chart.Series["TTBR middle"].Points.AddXY(currentElapsedTime, General.TTBL2);
+            TTBR_chart.Series["TTBR outer"].Points.AddXY(currentElapsedTime, General.TTBL3);
 
 
             MT_chart.Series["MT1"].Points.AddXY(currentElapsedTime, General.MT1);
