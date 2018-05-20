@@ -7,7 +7,6 @@ using System.IO.Ports;
 using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
-using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Data_Interface_Form
 {
@@ -39,8 +38,6 @@ namespace Data_Interface_Form
         internal static bool ReadingFromTheStream { get; set; }
         internal static bool RunThatBgDataWorker { get; set; }
         internal static bool AllowCsvWriting { get; set; }
-
-        Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
 
 
         internal static string ConnectedMsg

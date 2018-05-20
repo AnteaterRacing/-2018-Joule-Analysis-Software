@@ -52,6 +52,12 @@
             System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.streamStartBtn = new System.Windows.Forms.Button();
             this.streamStopBtn = new System.Windows.Forms.Button();
             this.cboPorts = new System.Windows.Forms.ComboBox();
@@ -76,8 +82,10 @@
             this.displayVisualBtn = new System.Windows.Forms.Button();
             this.bgWorkerDataFlow = new System.ComponentModel.BackgroundWorker();
             this.csvTimer = new System.Windows.Forms.Timer(this.components);
-            this.abTab = new System.Windows.Forms.TabPage();
+            this.tbTab = new System.Windows.Forms.TabPage();
             this.TB_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.batteryTab = new System.Windows.Forms.TabPage();
+            this.Battery_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.SensorTabs.SuspendLayout();
             this.tireTempTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TTBR_chart)).BeginInit();
@@ -85,8 +93,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.MT_chart)).BeginInit();
             this.wheelSpeedTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WS_chart)).BeginInit();
-            this.abTab.SuspendLayout();
+            this.tbTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TB_chart)).BeginInit();
+            this.batteryTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Battery_chart)).BeginInit();
             this.SuspendLayout();
             // 
             // streamStartBtn
@@ -140,7 +150,8 @@
             this.SensorTabs.Controls.Add(this.tireTempTab);
             this.SensorTabs.Controls.Add(this.motorTempTab);
             this.SensorTabs.Controls.Add(this.wheelSpeedTab);
-            this.SensorTabs.Controls.Add(this.abTab);
+            this.SensorTabs.Controls.Add(this.tbTab);
+            this.SensorTabs.Controls.Add(this.batteryTab);
             this.SensorTabs.Location = new System.Drawing.Point(12, 12);
             this.SensorTabs.Name = "SensorTabs";
             this.SensorTabs.SelectedIndex = 0;
@@ -404,15 +415,15 @@
             this.csvTimer.Interval = 1000;
             this.csvTimer.Tick += new System.EventHandler(this.csvTimer_Tick);
             // 
-            // abTab
+            // tbTab
             // 
-            this.abTab.Controls.Add(this.TB_chart);
-            this.abTab.Location = new System.Drawing.Point(4, 29);
-            this.abTab.Name = "abTab";
-            this.abTab.Size = new System.Drawing.Size(1113, 506);
-            this.abTab.TabIndex = 3;
-            this.abTab.Text = "Throttle/ Brake";
-            this.abTab.UseVisualStyleBackColor = true;
+            this.tbTab.Controls.Add(this.TB_chart);
+            this.tbTab.Location = new System.Drawing.Point(4, 29);
+            this.tbTab.Name = "tbTab";
+            this.tbTab.Size = new System.Drawing.Size(1113, 506);
+            this.tbTab.TabIndex = 3;
+            this.tbTab.Text = "Throttle/ Brake";
+            this.tbTab.UseVisualStyleBackColor = true;
             // 
             // TB_chart
             // 
@@ -443,6 +454,51 @@
             this.TB_chart.Size = new System.Drawing.Size(1110, 509);
             this.TB_chart.TabIndex = 4;
             this.TB_chart.Text = "chart2";
+            // 
+            // batteryTab
+            // 
+            this.batteryTab.Controls.Add(this.Battery_chart);
+            this.batteryTab.Location = new System.Drawing.Point(4, 29);
+            this.batteryTab.Name = "batteryTab";
+            this.batteryTab.Size = new System.Drawing.Size(1113, 506);
+            this.batteryTab.TabIndex = 4;
+            this.batteryTab.Text = "Battery Info.";
+            this.batteryTab.UseVisualStyleBackColor = true;
+            // 
+            // Battery_chart
+            // 
+            this.Battery_chart.BackColor = System.Drawing.Color.Khaki;
+            chartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea5.Name = "ChartArea1";
+            this.Battery_chart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.Battery_chart.Legends.Add(legend5);
+            this.Battery_chart.Location = new System.Drawing.Point(1, -1);
+            this.Battery_chart.Name = "Battery_chart";
+            series16.ChartArea = "ChartArea1";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series16.Legend = "Legend1";
+            series16.Name = "Voltage";
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series17.Legend = "Legend1";
+            series17.Name = "Current";
+            series18.ChartArea = "ChartArea1";
+            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series18.Legend = "Legend1";
+            series18.Name = "State of Charge";
+            series19.ChartArea = "ChartArea1";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series19.Legend = "Legend1";
+            series19.Name = "BMS Temp";
+            this.Battery_chart.Series.Add(series16);
+            this.Battery_chart.Series.Add(series17);
+            this.Battery_chart.Series.Add(series18);
+            this.Battery_chart.Series.Add(series19);
+            this.Battery_chart.Size = new System.Drawing.Size(1110, 509);
+            this.Battery_chart.TabIndex = 2;
+            this.Battery_chart.Text = "Battery_chart";
             // 
             // MainForm
             // 
@@ -475,8 +531,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.MT_chart)).EndInit();
             this.wheelSpeedTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.WS_chart)).EndInit();
-            this.abTab.ResumeLayout(false);
+            this.tbTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TB_chart)).EndInit();
+            this.batteryTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Battery_chart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,8 +566,10 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart TTBR_chart;
         private System.Windows.Forms.DataVisualization.Charting.Chart MT_chart;
         private System.Windows.Forms.DataVisualization.Charting.Chart WS_chart;
-        private System.Windows.Forms.TabPage abTab;
+        private System.Windows.Forms.TabPage tbTab;
         private System.Windows.Forms.DataVisualization.Charting.Chart TB_chart;
+        private System.Windows.Forms.TabPage batteryTab;
+        private System.Windows.Forms.DataVisualization.Charting.Chart Battery_chart;
     }
 }
 

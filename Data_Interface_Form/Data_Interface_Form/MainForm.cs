@@ -76,6 +76,7 @@ namespace Data_Interface_Form
                 MT_chart.ChartAreas[0].AxisX.Minimum = (double)currentElapsedTime - General.chartSpeed;
                 WS_chart.ChartAreas[0].AxisX.Minimum = (double)currentElapsedTime - General.chartSpeed;
                 TB_chart.ChartAreas[0].AxisX.Minimum = (double)currentElapsedTime - General.chartSpeed;
+                Battery_chart.ChartAreas[0].AxisX.Minimum = (double)currentElapsedTime - General.chartSpeed;
 
             }
             else
@@ -84,6 +85,7 @@ namespace Data_Interface_Form
                 MT_chart.ChartAreas[0].AxisX.Minimum = 0;
                 WS_chart.ChartAreas[0].AxisX.Minimum = 0;
                 TB_chart.ChartAreas[0].AxisX.Minimum = 0;
+                Battery_chart.ChartAreas[0].AxisX.Minimum = 0;
 
             }
 
@@ -107,6 +109,11 @@ namespace Data_Interface_Form
             TB_chart.Series["Brake"].Points.AddXY(currentElapsedTime, General.brakeAngle);
             TB_chart.Series["ThrottleL"].Points.AddXY(currentElapsedTime, General.throttleL);
             TB_chart.Series["ThrottleR"].Points.AddXY(currentElapsedTime, General.throttleR);
+
+            Battery_chart.Series["Voltage"].Points.AddXY(currentElapsedTime, General.packVoltage);
+            Battery_chart.Series["Current"].Points.AddXY(currentElapsedTime, General.packCurrent);
+            Battery_chart.Series["State of Charge"].Points.AddXY(currentElapsedTime, General.packCharge);
+            Battery_chart.Series["BMS Temp"].Points.AddXY(currentElapsedTime, General.packTemperature);
         }
 
         private void cboPorts_SelectedIndexChanged(object sender, EventArgs e)

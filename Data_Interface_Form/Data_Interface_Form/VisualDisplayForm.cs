@@ -29,6 +29,8 @@ namespace Data_Interface_Form
         Rectangle frontRightWheel1, frontRightWheel2, frontRightWheel3;
         Rectangle rearLeftWheel1, rearLeftWheel2, rearLeftWheel3;
         Rectangle rearRightWheel1, rearRightWheel2, rearRightWheel3;
+
+        Rectangle packVoltage, packVoltageEmpty;
         #endregion
 
         #region Declaring color objects for the rectangles
@@ -47,6 +49,9 @@ namespace Data_Interface_Form
         Color rr1_color = new Color();
         Color rr2_color = new Color();
         Color rr3_color = new Color();
+
+        Color packVoltage_color = new Color();
+        Color packVoltageEmpty_color = new Color();
         #endregion 
 
         private void VisualDisplayForm_Paint(object sender, PaintEventArgs e)
@@ -67,6 +72,9 @@ namespace Data_Interface_Form
             rearRightWheel1 = new Rectangle(150, 340, 15, 80);
             rearRightWheel2 = new Rectangle(165, 340, 15, 80);
             rearRightWheel3 = new Rectangle(180, 340, 15, 80);
+
+            packVoltage = new Rectangle(300, 60, 50, 20);
+            packVoltageEmpty = new Rectangle(350, 60, 10, 20);
             #endregion
 
             #region Create solid brush instances to color the rectangles
@@ -85,6 +93,9 @@ namespace Data_Interface_Form
             SolidBrush rr1 = new SolidBrush(rr1_color);
             SolidBrush rr2 = new SolidBrush(rr2_color);
             SolidBrush rr3 = new SolidBrush(rr3_color);
+
+            SolidBrush voltageBrush = new SolidBrush(packVoltage_color);
+            SolidBrush voltageEmptyBrush = new SolidBrush(packVoltageEmpty_color);
             #endregion
 
             #region Initially fill the color of the rectangles at visuals form openning
@@ -103,6 +114,9 @@ namespace Data_Interface_Form
             e.Graphics.FillRectangle(rr1, rearRightWheel1);
             e.Graphics.FillRectangle(rr2, rearRightWheel2);
             e.Graphics.FillRectangle(rr3, rearRightWheel3);
+
+            e.Graphics.FillRectangle(voltageBrush, packVoltage);
+            e.Graphics.FillRectangle(voltageEmptyBrush, packVoltageEmpty);
             #endregion
         }
 
@@ -110,21 +124,28 @@ namespace Data_Interface_Form
         {
             
             //General.TTBL1 is divided by 200 in order to get it into a percentage approximately
-            decimal x_fl1 = (decimal)(((double)(General.TTFL1)) / 200.0);
-            decimal x_fl2 = (decimal)(((double)(General.TTFL2)) / 200.0);
-            decimal x_fl3 = (decimal)(((double)(General.TTFL3)) / 200.0);
+            double x_fl1 = (((double)(General.TTFL1)) / 200.0);
+            double x_fl2 = (((double)(General.TTFL2)) / 200.0);
+            double x_fl3 = (((double)(General.TTFL3)) / 200.0);
 
-            decimal x_fr1 = (decimal)(((double)(General.TTFR1)) / 200.0);
-            decimal x_fr2 = (decimal)(((double)(General.TTFR2)) / 200.0);
-            decimal x_fr3 = (decimal)(((double)(General.TTFR3)) / 200.0);
+            double x_fr1 = (((double)(General.TTFR1)) / 200.0);
+            double x_fr2 = (((double)(General.TTFR2)) / 200.0);
+            double x_fr3 = (((double)(General.TTFR3)) / 200.0);
 
-            decimal x_rl1 = (decimal)(((double)(General.TTBL1)) / 200.0);
-            decimal x_rl2 = (decimal)(((double)(General.TTBL2)) / 200.0);
-            decimal x_rl3 = (decimal)(((double)(General.TTBL3)) / 200.0);
+            double x_rl1 = (((double)(General.TTBL1)) / 200.0);
+            double x_rl2 = (((double)(General.TTBL2)) / 200.0);
+            double x_rl3 = (((double)(General.TTBL3)) / 200.0);
 
-            decimal x_rr1 = (decimal)(((double)(General.TTBR1)) / 200.0);
-            decimal x_rr2 = (decimal)(((double)(General.TTBR2)) / 200.0);
-            decimal x_rr3 = (decimal)(((double)(General.TTBR3)) / 200.0);
+            double x_rr1 = (((double)(General.TTBR1)) / 200.0);
+            double x_rr2 = (((double)(General.TTBR2)) / 200.0);
+            double x_rr3 = (((double)(General.TTBR3)) / 200.0);
+
+            double x_packVoltage = ((General.packVoltage)*(1/255.0)*(60.0));
+            double x_packVoltageEmpty = 60.0 - x_packVoltage;
+
+            packVoltage.Width = (int)x_packVoltage;
+            packVoltageEmpty.X = 300 + (int)x_packVoltage;
+            packVoltageEmpty.Width = (int)x_packVoltageEmpty;
 
 
             //This code will change the intensity of the tire color based on the tire temp
@@ -143,6 +164,9 @@ namespace Data_Interface_Form
             rr1_color = Color.FromArgb(Color.Red.A, (int)((Color.Red.R) * x_rr1), (int)((Color.Red.G) * x_rr1), (int)((Color.Red.B) * x_rr1));
             rr2_color = Color.FromArgb(Color.Red.A, (int)((Color.Red.R) * x_rr2), (int)((Color.Red.G) * x_rr2), (int)((Color.Red.B) * x_rr2));
             rr3_color = Color.FromArgb(Color.Red.A, (int)((Color.Red.R) * x_rr3), (int)((Color.Red.G) * x_rr3), (int)((Color.Red.B) * x_rr3));
+
+            packVoltage_color = Color.Green;
+            packVoltageEmpty_color = Color.Black;
 
             this.Invalidate();
         }
