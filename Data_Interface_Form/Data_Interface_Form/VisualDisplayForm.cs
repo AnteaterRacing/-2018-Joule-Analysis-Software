@@ -193,8 +193,8 @@ namespace Data_Interface_Form
         private Point[] rotateRectangle(Point[] points)
         {
             Point[] newPoints = new Point[4] { new Point(1,1), new Point(1, 1), new Point(1, 1), new Point(1, 1) };
-            double center_y = points[0].Y - ((points[0].Y - points[3].Y) / 2);
-            double center_x = points[0].X - ((points[0].X - points[3].X) / 2);
+            double center_y = points[0].Y - ((points[3].Y - points[0].Y) / 2);
+            double center_x = points[0].X - ((points[3].X - points[0].X) / 2);
             for (int index = 0; index < newPoints.Length; index++)
             {
                 newPoints[index].X = (int)(center_x + (points[index].X * Math.Cos(/*General.steeringAngle*/30 * (Math.PI / 180))) - 

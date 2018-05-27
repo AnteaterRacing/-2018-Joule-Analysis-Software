@@ -120,15 +120,15 @@ namespace Data_Interface_Form
 
 
             // Battery pack data being set
-            General.packVoltage = (int)map(sensorData[20], 0, 255, 0, 94);
-            General.packCurrent = (int)map(sensorData[21], 0, 255, 0, 500);
+            General.packVoltage = (int)map(Pack_Conversion(sensorData[20], sensorData[21]), 0, 255, 0, 94) / 10;
+            General.packCurrent = (int)map(Pack_Conversion(sensorData[22], sensorData[23]), 0, 255, 0, 500) / 10;
             // We do not know the ranges for the pack Temperatre currently
-            General.packTemperature = sensorData[22];
-            General.packCharge = sensorData[23];
+            General.packTemperature = sensorData[24];
+            General.packCharge = sensorData[25];
 
             // Steering and brake angle being set
-            General.steeringAngle = sensorData[24];
-            General.brakeAngle = sensorData[25];
+            General.steeringAngle = sensorData[26];
+            General.brakeAngle = sensorData[27];
         }
 
         #region calculations for sensor data
@@ -146,6 +146,12 @@ namespace Data_Interface_Form
         public static float map(this float value, float from1, float to1, float from2, float to2)
         {
             return ((value - from1) / (to1 - from1)) * (to2 - from2) + from2;
+        }
+
+        public static int Pack_Conversion(int byte1, int byte2)
+        {
+            // Recombines the two bytes into 1.
+            return (byte1 << 8) | byte2;
         }
         #endregion
 
