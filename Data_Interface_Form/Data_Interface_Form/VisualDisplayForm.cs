@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace Data_Interface_Form
 {
@@ -25,7 +26,7 @@ namespace Data_Interface_Form
         }
 
         #region Declaring rectangle objects
-        Rectangle frontLeftWheel1, frontLeftWheel2, frontLeftWheel3;
+        Point [] frontLeftWheel1, frontLeftWheel2, frontLeftWheel3;
         Rectangle frontRightWheel1, frontRightWheel2, frontRightWheel3;
         Rectangle rearLeftWheel1, rearLeftWheel2, rearLeftWheel3;
         Rectangle rearRightWheel1, rearRightWheel2, rearRightWheel3;
@@ -57,9 +58,9 @@ namespace Data_Interface_Form
         private void VisualDisplayForm_Paint(object sender, PaintEventArgs e)
         {
             #region Create rectangle instances
-            frontLeftWheel1 = new Rectangle(20, 60, 15, 80);
-            frontLeftWheel2 = new Rectangle(35, 60, 15, 80);
-            frontLeftWheel3 = new Rectangle(50, 60, 15, 80);
+            frontLeftWheel1 = new Point [] { new Point(20, 60), new Point(35, 60), new Point(35, 140), new Point(20, 140) };   //new Rectangle(20, 60, 15, 80);
+            frontLeftWheel2 = new Point [] { new Point(35, 60), new Point(50, 60), new Point(50, 140), new Point(35, 140) };    //new Rectangle(35, 60, 15, 80);
+            frontLeftWheel3 = new Point [] { new Point(50, 60), new Point(65, 60), new Point(65, 140), new Point(50, 140) };    //new Rectangle(50, 60, 15, 80);
 
             frontRightWheel1 = new Rectangle(150, 60, 15, 80);
             frontRightWheel2 = new Rectangle(165, 60, 15, 80);
@@ -98,10 +99,20 @@ namespace Data_Interface_Form
             SolidBrush voltageEmptyBrush = new SolidBrush(packVoltageEmpty_color);
             #endregion
 
+            #region Rotates Front Wheels Based on Steering Angle
+            steeringWheel.Image = RotateImage(steeringWheel.Image, (float)General.steeringAngle);
+            //frontLeftWheel1 = rotateRectangle(frontLeftWheel1);
+            //frontLeftWheel2 = rotateRectangle(frontLeftWheel2);
+            //frontLeftWheel3 = rotateRectangle(frontLeftWheel3);
+            //rotateRectangle(ref frontRightWheel1);
+            //rotateRectangle(ref frontRightWheel2);
+            //rotateRectangle(ref frontRightWheel3);
+            #endregion
+
             #region Initially fill the color of the rectangles at visuals form openning
-            e.Graphics.FillRectangle(fl1, frontLeftWheel1);
-            e.Graphics.FillRectangle(fl2, frontLeftWheel2);
-            e.Graphics.FillRectangle(fl3, frontLeftWheel3);
+            e.Graphics.FillPolygon(fl1, frontLeftWheel1);
+            e.Graphics.FillPolygon(fl2, frontLeftWheel2);
+            e.Graphics.FillPolygon(fl3, frontLeftWheel3);
 
             e.Graphics.FillRectangle(fr1, frontRightWheel1);
             e.Graphics.FillRectangle(fr2, frontRightWheel2);
@@ -171,5 +182,62 @@ namespace Data_Interface_Form
             this.Invalidate();
         }
 
+        private Point[] rotateRectangle(Point[] points)
+        {
+            Point[] newPoints = new Point[4] { new Point(1,1), new Point(1, 1), new Point(1, 1), new Point(1, 1) };
+            double halfHeight = ((points[0].Y - points[3].Y) / 2);
+            double halfWidth = ((points[0].X - points[3].X) / 2);
+            for (int index = 0; index < points.Length; index++)
+            {
+                if (index == 0)
+                {
+                    halfHeight = Math.Abs(halfHeight);
+                    halfWidth *= -1;
+                }
+                else if (index == 1)
+                {
+                    halfHeight = Math.Abs(halfHeight);
+                    halfWidth = Math.Abs(halfWidth);
+                }
+                else if (index == 2)
+                {
+                    halfHeight *= -1;
+                    halfWidth = Math.Abs(halfWidth);
+                }
+                else
+                {
+                    halfHeight = Math.Abs(halfHeight);
+                    halfWidth *= -1;
+                }
+
+                newPoints[index].X = (int)(points[index].X + (halfWidth * Math.Cos(/*General.steeringAngle*/30 * (Math.PI / 180))) - 
+                    (points[index].Y * Math.Sin(/*General.steeringAngle*/30 * (Math.PI / 180))));
+                newPoints[index].Y = (int)(points[index].Y + (halfWidth * Math.Sin(/*General.steeringAngle*/30 * (Math.PI / 180))) + 
+                    (halfHeight * Math.Cos(/*General.steeringAngle*/30 * (Math.PI / 180))));
+                Console.WriteLine("{0}, {1}", newPoints[index].X, newPoints[index].Y);
+            }
+            return newPoints;
+        }
+
+        public static Bitmap RotateImage(Image b, float angle) // Source: https://stackoverflow.com/questions/27431345/rotating-image-around-center-c-sharp?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+        {
+            //Create a new empty bitmap to hold rotated image.
+            Bitmap returnBitmap = new Bitmap(b.Width, b.Height);
+            //Make a graphics object from the empty bitmap.
+            Graphics g = Graphics.FromImage(returnBitmap);
+            //move rotation point to center of image.
+            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            g.TranslateTransform((float)b.Width / 2, (float)b.Height / 2);
+            //Rotate.        
+            g.RotateTransform(angle);
+            //Move image back.
+            g.TranslateTransform(-(float)b.Width / 2, -(float)b.Height / 2);
+            //Draw passed in image onto graphics object.
+            //Found ERROR 1: Many people do g.DwarImage(b,0,0); The problem is that you re giving just the position
+            //Found ERROR 2: Many people do g.DrawImage(b, new Point(0,0)); The size still not present hehe :3
+
+            g.DrawImage(b, 0, 0, b.Width, b.Height);  //My Final Solution :3
+            return returnBitmap;
+        }
     }
 }

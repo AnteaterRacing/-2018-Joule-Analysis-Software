@@ -10,7 +10,7 @@ namespace Data_Interface_Form
     class BackEnd
     {
         //make sure the string below goes to the right directory for your database
-        static string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\SensorDatabase.mdf;Integrated Security=True";
+        static string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\SensorDatabase.mdf;Integrated Security=True";
         static SqlConnection myConn2SensorDB = new SqlConnection(connString);
 
         #region Post to the SQL Database

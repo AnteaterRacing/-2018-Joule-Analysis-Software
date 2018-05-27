@@ -258,7 +258,6 @@ namespace Data_Interface_Form
         private void displayVisualBtn_Click(object sender, EventArgs e)
         {
             VisualDisplayForm visualDisplayFormInstance = new VisualDisplayForm();
-
             visualDisplayFormInstance.Show();
         }
 

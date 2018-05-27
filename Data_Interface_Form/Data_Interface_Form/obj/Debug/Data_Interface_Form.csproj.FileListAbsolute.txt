@@ -11,3 +11,16 @@ C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Fo
 C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\SensorDatabase.mdf
 C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\SensorDatabase_log.ldf
 C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.VisualDisplayForm.resources
+C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.MainForm.resources
+C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.Properties.Resources.resources
+C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.VisualDisplayForm.resources
+C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.csproj.GenerateResource.cache
+C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.csproj.CoreCompileInputs.cache
+C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.exe
+C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.pdb
+C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\SensorDatabase.mdf
+C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\SensorDatabase_log.ldf
+C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\Data_Interface_Form.exe.config
+C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\Data_Interface_Form.exe
+C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\Data_Interface_Form.pdb
+C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.csprojAssemblyReference.cache

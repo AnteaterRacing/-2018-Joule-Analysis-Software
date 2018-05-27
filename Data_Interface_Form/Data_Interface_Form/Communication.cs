@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO.Ports;
 using System.IO;
 
-using Excel = Microsoft.Office.Interop.Excel;
+//using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Data_Interface_Form
 {
