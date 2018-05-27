@@ -11,6 +11,11 @@ using System.Drawing.Drawing2D;
 
 namespace Data_Interface_Form
 {
+    public static class lastSteeringValueClass
+    {
+        public static float lastSteeringValue = 0.0F;
+    }
+
     public partial class VisualDisplayForm : Form
     {
         public VisualDisplayForm()
@@ -21,7 +26,6 @@ namespace Data_Interface_Form
         private void VisualDisplayForm_Load(object sender, EventArgs e)
         {
             General.visualDisplayFormAddress = this;
-
             visualsUpdateTimer.Enabled = true;
         }
 
@@ -100,10 +104,14 @@ namespace Data_Interface_Form
             #endregion
 
             #region Rotates Front Wheels Based on Steering Angle
-            steeringWheel.Image = RotateImage(steeringWheel.Image, (float)General.steeringAngle);
-            //frontLeftWheel1 = rotateRectangle(frontLeftWheel1);
-            //frontLeftWheel2 = rotateRectangle(frontLeftWheel2);
-            //frontLeftWheel3 = rotateRectangle(frontLeftWheel3);
+            if (lastSteeringValueClass.lastSteeringValue != (float)General.steeringAngle)
+            {
+                steeringWheel.Image = RotateImage(steeringWheel.Image, (float)General.steeringAngle);
+                lastSteeringValueClass.lastSteeringValue = (float)General.steeringAngle;
+            }
+            frontLeftWheel1 = rotateRectangle(frontLeftWheel1);
+            frontLeftWheel2 = rotateRectangle(frontLeftWheel2);
+            frontLeftWheel3 = rotateRectangle(frontLeftWheel3);
             //rotateRectangle(ref frontRightWheel1);
             //rotateRectangle(ref frontRightWheel2);
             //rotateRectangle(ref frontRightWheel3);
@@ -185,35 +193,14 @@ namespace Data_Interface_Form
         private Point[] rotateRectangle(Point[] points)
         {
             Point[] newPoints = new Point[4] { new Point(1,1), new Point(1, 1), new Point(1, 1), new Point(1, 1) };
-            double halfHeight = ((points[0].Y - points[3].Y) / 2);
-            double halfWidth = ((points[0].X - points[3].X) / 2);
-            for (int index = 0; index < points.Length; index++)
+            double center_y = points[0].Y - ((points[0].Y - points[3].Y) / 2);
+            double center_x = points[0].X - ((points[0].X - points[3].X) / 2);
+            for (int index = 0; index < newPoints.Length; index++)
             {
-                if (index == 0)
-                {
-                    halfHeight = Math.Abs(halfHeight);
-                    halfWidth *= -1;
-                }
-                else if (index == 1)
-                {
-                    halfHeight = Math.Abs(halfHeight);
-                    halfWidth = Math.Abs(halfWidth);
-                }
-                else if (index == 2)
-                {
-                    halfHeight *= -1;
-                    halfWidth = Math.Abs(halfWidth);
-                }
-                else
-                {
-                    halfHeight = Math.Abs(halfHeight);
-                    halfWidth *= -1;
-                }
-
-                newPoints[index].X = (int)(points[index].X + (halfWidth * Math.Cos(/*General.steeringAngle*/30 * (Math.PI / 180))) - 
+                newPoints[index].X = (int)(center_x + (points[index].X * Math.Cos(/*General.steeringAngle*/30 * (Math.PI / 180))) - 
                     (points[index].Y * Math.Sin(/*General.steeringAngle*/30 * (Math.PI / 180))));
-                newPoints[index].Y = (int)(points[index].Y + (halfWidth * Math.Sin(/*General.steeringAngle*/30 * (Math.PI / 180))) + 
-                    (halfHeight * Math.Cos(/*General.steeringAngle*/30 * (Math.PI / 180))));
+                newPoints[index].Y = (int)(center_y + (points[index].X * Math.Sin(/*General.steeringAngle*/30 * (Math.PI / 180))) + 
+                    (points[index].Y * Math.Cos(/*General.steeringAngle*/30 * (Math.PI / 180))));
                 Console.WriteLine("{0}, {1}", newPoints[index].X, newPoints[index].Y);
             }
             return newPoints;
@@ -223,11 +210,14 @@ namespace Data_Interface_Form
         {
             //Create a new empty bitmap to hold rotated image.
             Bitmap returnBitmap = new Bitmap(b.Width, b.Height);
+
             //Make a graphics object from the empty bitmap.
             Graphics g = Graphics.FromImage(returnBitmap);
+
             //move rotation point to center of image.
             g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
             g.TranslateTransform((float)b.Width / 2, (float)b.Height / 2);
+            
             //Rotate.        
             g.RotateTransform(angle);
             //Move image back.
@@ -236,7 +226,7 @@ namespace Data_Interface_Form
             //Found ERROR 1: Many people do g.DwarImage(b,0,0); The problem is that you re giving just the position
             //Found ERROR 2: Many people do g.DrawImage(b, new Point(0,0)); The size still not present hehe :3
 
-            g.DrawImage(b, 0, 0, b.Width, b.Height);  //My Final Solution :3
+            g.DrawImage(b, 0, 0, b.Width, b.Height);
             return returnBitmap;
         }
     }

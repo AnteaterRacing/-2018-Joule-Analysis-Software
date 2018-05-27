@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Diagnostics;
-using Excel = Microsoft.Office.Interop.Excel;
+//using Excel = Microsoft.Office.Interop.Excel;
 // THE ABOVE USING IS ESSENTIAL!!!! You must look for this interop that is downloaded directly on 
 // your computer when you get Microsoft Office.
 // I added it by going to references -> right click -> add reference -> browse 
