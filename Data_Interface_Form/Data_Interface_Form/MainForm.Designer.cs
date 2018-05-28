@@ -69,10 +69,6 @@
             this.MT_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.wheelSpeedTab = new System.Windows.Forms.TabPage();
             this.WS_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tbTab = new System.Windows.Forms.TabPage();
-            this.TB_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.batteryTab = new System.Windows.Forms.TabPage();
-            this.Battery_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.refreshBtn = new System.Windows.Forms.Button();
             this.infoLabel = new System.Windows.Forms.Label();
             this.connectBtn = new System.Windows.Forms.Button();
@@ -86,7 +82,10 @@
             this.displayVisualBtn = new System.Windows.Forms.Button();
             this.bgWorkerDataFlow = new System.ComponentModel.BackgroundWorker();
             this.csvTimer = new System.Windows.Forms.Timer(this.components);
-            this.excelCheckBox = new System.Windows.Forms.CheckBox();
+            this.tbTab = new System.Windows.Forms.TabPage();
+            this.TB_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.batteryTab = new System.Windows.Forms.TabPage();
+            this.Battery_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.SensorTabs.SuspendLayout();
             this.tireTempTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TTBR_chart)).BeginInit();
@@ -297,6 +296,125 @@
             this.WS_chart.TabIndex = 3;
             this.WS_chart.Text = "chart2";
             // 
+            // refreshBtn
+            // 
+            this.refreshBtn.BackColor = System.Drawing.Color.Aqua;
+            this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshBtn.ForeColor = System.Drawing.Color.Black;
+            this.refreshBtn.Location = new System.Drawing.Point(167, 566);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(93, 53);
+            this.refreshBtn.TabIndex = 5;
+            this.refreshBtn.Text = "Refresh";
+            this.refreshBtn.UseVisualStyleBackColor = false;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
+            // 
+            // infoLabel
+            // 
+            this.infoLabel.BackColor = System.Drawing.Color.Azure;
+            this.infoLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.infoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoLabel.Location = new System.Drawing.Point(420, 566);
+            this.infoLabel.Name = "infoLabel";
+            this.infoLabel.Size = new System.Drawing.Size(360, 100);
+            this.infoLabel.TabIndex = 6;
+            // 
+            // connectBtn
+            // 
+            this.connectBtn.BackColor = System.Drawing.Color.Silver;
+            this.connectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.connectBtn.Location = new System.Drawing.Point(266, 566);
+            this.connectBtn.Name = "connectBtn";
+            this.connectBtn.Size = new System.Drawing.Size(148, 47);
+            this.connectBtn.TabIndex = 7;
+            this.connectBtn.Text = "CONNECT";
+            this.connectBtn.UseVisualStyleBackColor = false;
+            this.connectBtn.Click += new System.EventHandler(this.connectBtn_Click);
+            // 
+            // disconnectBtn
+            // 
+            this.disconnectBtn.BackColor = System.Drawing.Color.DarkGray;
+            this.disconnectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.disconnectBtn.Location = new System.Drawing.Point(266, 619);
+            this.disconnectBtn.Name = "disconnectBtn";
+            this.disconnectBtn.Size = new System.Drawing.Size(148, 47);
+            this.disconnectBtn.TabIndex = 8;
+            this.disconnectBtn.Text = "DISCONNECT";
+            this.disconnectBtn.UseVisualStyleBackColor = false;
+            this.disconnectBtn.Click += new System.EventHandler(this.disconnectBtn_Click);
+            // 
+            // bgWorkerSQL
+            // 
+            this.bgWorkerSQL.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerSQL_DoWork);
+            this.bgWorkerSQL.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorkerSQL_RunWorkerCompleted);
+            // 
+            // sqlSaveBtn
+            // 
+            this.sqlSaveBtn.BackColor = System.Drawing.Color.Gainsboro;
+            this.sqlSaveBtn.Location = new System.Drawing.Point(942, 566);
+            this.sqlSaveBtn.Name = "sqlSaveBtn";
+            this.sqlSaveBtn.Size = new System.Drawing.Size(192, 47);
+            this.sqlSaveBtn.TabIndex = 9;
+            this.sqlSaveBtn.Text = "Save to Database";
+            this.sqlSaveBtn.UseVisualStyleBackColor = false;
+            this.sqlSaveBtn.Click += new System.EventHandler(this.sqlSaveBtn_Click);
+            // 
+            // dataTimer
+            // 
+            this.dataTimer.Interval = 50;
+            this.dataTimer.Tick += new System.EventHandler(this.dataTimer_Tick);
+            // 
+            // chartScrollBar
+            // 
+            this.chartScrollBar.Location = new System.Drawing.Point(942, 644);
+            this.chartScrollBar.Name = "chartScrollBar";
+            this.chartScrollBar.Size = new System.Drawing.Size(191, 22);
+            this.chartScrollBar.TabIndex = 10;
+            this.chartScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.chartScrollBar_Scroll);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Cornsilk;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Location = new System.Drawing.Point(942, 616);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 22);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Chart Speed";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // scrollCheckBox
+            // 
+            this.scrollCheckBox.AutoSize = true;
+            this.scrollCheckBox.Location = new System.Drawing.Point(1058, 616);
+            this.scrollCheckBox.Name = "scrollCheckBox";
+            this.scrollCheckBox.Size = new System.Drawing.Size(83, 24);
+            this.scrollCheckBox.TabIndex = 12;
+            this.scrollCheckBox.Text = "Scroll?";
+            this.scrollCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // displayVisualBtn
+            // 
+            this.displayVisualBtn.BackColor = System.Drawing.Color.BurlyWood;
+            this.displayVisualBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayVisualBtn.Location = new System.Drawing.Point(11, 630);
+            this.displayVisualBtn.Name = "displayVisualBtn";
+            this.displayVisualBtn.Size = new System.Drawing.Size(248, 35);
+            this.displayVisualBtn.TabIndex = 13;
+            this.displayVisualBtn.Text = "Visual Display";
+            this.displayVisualBtn.UseVisualStyleBackColor = false;
+            this.displayVisualBtn.Click += new System.EventHandler(this.displayVisualBtn_Click);
+            // 
+            // bgWorkerDataFlow
+            // 
+            this.bgWorkerDataFlow.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerDataFlow_DoWork);
+            // 
+            // csvTimer
+            // 
+            this.csvTimer.Interval = 1000;
+            this.csvTimer.Tick += new System.EventHandler(this.csvTimer_Tick);
+            // 
             // tbTab
             // 
             this.tbTab.Controls.Add(this.TB_chart);
@@ -382,142 +500,12 @@
             this.Battery_chart.TabIndex = 2;
             this.Battery_chart.Text = "Battery_chart";
             // 
-            // refreshBtn
-            // 
-            this.refreshBtn.BackColor = System.Drawing.Color.Aqua;
-            this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshBtn.ForeColor = System.Drawing.Color.Black;
-            this.refreshBtn.Location = new System.Drawing.Point(167, 566);
-            this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(93, 53);
-            this.refreshBtn.TabIndex = 5;
-            this.refreshBtn.Text = "Refresh";
-            this.refreshBtn.UseVisualStyleBackColor = false;
-            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
-            // 
-            // infoLabel
-            // 
-            this.infoLabel.BackColor = System.Drawing.Color.Azure;
-            this.infoLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.infoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoLabel.Location = new System.Drawing.Point(420, 566);
-            this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(360, 72);
-            this.infoLabel.TabIndex = 6;
-            // 
-            // connectBtn
-            // 
-            this.connectBtn.BackColor = System.Drawing.Color.Silver;
-            this.connectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.connectBtn.Location = new System.Drawing.Point(266, 566);
-            this.connectBtn.Name = "connectBtn";
-            this.connectBtn.Size = new System.Drawing.Size(148, 47);
-            this.connectBtn.TabIndex = 7;
-            this.connectBtn.Text = "CONNECT";
-            this.connectBtn.UseVisualStyleBackColor = false;
-            this.connectBtn.Click += new System.EventHandler(this.connectBtn_Click);
-            // 
-            // disconnectBtn
-            // 
-            this.disconnectBtn.BackColor = System.Drawing.Color.DarkGray;
-            this.disconnectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.disconnectBtn.Location = new System.Drawing.Point(266, 619);
-            this.disconnectBtn.Name = "disconnectBtn";
-            this.disconnectBtn.Size = new System.Drawing.Size(148, 47);
-            this.disconnectBtn.TabIndex = 8;
-            this.disconnectBtn.Text = "DISCONNECT";
-            this.disconnectBtn.UseVisualStyleBackColor = false;
-            this.disconnectBtn.Click += new System.EventHandler(this.disconnectBtn_Click);
-            // 
-            // bgWorkerSQL
-            // 
-            this.bgWorkerSQL.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerSQL_DoWork);
-            this.bgWorkerSQL.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorkerSQL_RunWorkerCompleted);
-            // 
-            // sqlSaveBtn
-            // 
-            this.sqlSaveBtn.BackColor = System.Drawing.Color.Gainsboro;
-            this.sqlSaveBtn.Location = new System.Drawing.Point(942, 566);
-            this.sqlSaveBtn.Name = "sqlSaveBtn";
-            this.sqlSaveBtn.Size = new System.Drawing.Size(192, 47);
-            this.sqlSaveBtn.TabIndex = 9;
-            this.sqlSaveBtn.Text = "Save to Database";
-            this.sqlSaveBtn.UseVisualStyleBackColor = false;
-            this.sqlSaveBtn.Click += new System.EventHandler(this.sqlSaveBtn_Click);
-            // 
-            // dataTimer
-            // 
-            this.dataTimer.Interval = 50;
-            this.dataTimer.Tick += new System.EventHandler(this.dataTimer_Tick);
-            // 
-            // chartScrollBar
-            // 
-            this.chartScrollBar.Location = new System.Drawing.Point(942, 644);
-            this.chartScrollBar.Name = "chartScrollBar";
-            this.chartScrollBar.Size = new System.Drawing.Size(191, 22);
-            this.chartScrollBar.TabIndex = 10;
-            this.chartScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.chartScrollBar_Scroll);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Cornsilk;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(942, 616);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 22);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Chart Speed";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // scrollCheckBox
-            // 
-            this.scrollCheckBox.AutoSize = true;
-            this.scrollCheckBox.Location = new System.Drawing.Point(420, 644);
-            this.scrollCheckBox.Name = "scrollCheckBox";
-            this.scrollCheckBox.Size = new System.Drawing.Size(83, 24);
-            this.scrollCheckBox.TabIndex = 12;
-            this.scrollCheckBox.Text = "Scroll?";
-            this.scrollCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // displayVisualBtn
-            // 
-            this.displayVisualBtn.BackColor = System.Drawing.Color.BurlyWood;
-            this.displayVisualBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayVisualBtn.Location = new System.Drawing.Point(11, 630);
-            this.displayVisualBtn.Name = "displayVisualBtn";
-            this.displayVisualBtn.Size = new System.Drawing.Size(248, 35);
-            this.displayVisualBtn.TabIndex = 13;
-            this.displayVisualBtn.Text = "Visual Display";
-            this.displayVisualBtn.UseVisualStyleBackColor = false;
-            this.displayVisualBtn.Click += new System.EventHandler(this.displayVisualBtn_Click);
-            // 
-            // bgWorkerDataFlow
-            // 
-            this.bgWorkerDataFlow.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerDataFlow_DoWork);
-            // 
-            // csvTimer
-            // 
-            this.csvTimer.Interval = 1000;
-            this.csvTimer.Tick += new System.EventHandler(this.csvTimer_Tick);
-            // 
-            // excelCheckBox
-            // 
-            this.excelCheckBox.AutoSize = true;
-            this.excelCheckBox.Location = new System.Drawing.Point(525, 644);
-            this.excelCheckBox.Name = "excelCheckBox";
-            this.excelCheckBox.Size = new System.Drawing.Size(172, 24);
-            this.excelCheckBox.TabIndex = 14;
-            this.excelCheckBox.Text = "Make Excel Sheet?";
-            this.excelCheckBox.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1146, 683);
-            this.Controls.Add(this.excelCheckBox);
             this.Controls.Add(this.displayVisualBtn);
             this.Controls.Add(this.scrollCheckBox);
             this.Controls.Add(this.label1);
@@ -582,7 +570,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart TB_chart;
         private System.Windows.Forms.TabPage batteryTab;
         private System.Windows.Forms.DataVisualization.Charting.Chart Battery_chart;
-        private System.Windows.Forms.CheckBox excelCheckBox;
     }
 }
 

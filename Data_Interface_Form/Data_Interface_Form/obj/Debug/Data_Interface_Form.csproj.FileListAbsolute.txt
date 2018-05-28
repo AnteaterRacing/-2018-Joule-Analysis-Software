@@ -11,4 +11,3 @@ C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Fo
 C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\SensorDatabase.mdf
 C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\SensorDatabase_log.ldf
 C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.VisualDisplayForm.resources
-C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.csproj.ResolveComReference.cache

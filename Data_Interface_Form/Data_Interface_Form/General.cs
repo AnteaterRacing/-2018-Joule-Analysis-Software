@@ -28,8 +28,7 @@ namespace Data_Interface_Form
 
         internal static int chartSpeed { get; set; }
 
-        //28 because packVoltage and packCurrent now require 2 bytes each
-        internal static int numberOfSensors = 28;
+        internal static int numberOfSensors = 26;
 
         internal static byte[] data = new byte[General.numberOfSensors];
         internal static int[] dataInt = new int[General.numberOfSensors];
@@ -39,8 +38,6 @@ namespace Data_Interface_Form
         internal static bool ReadingFromTheStream { get; set; }
         internal static bool RunThatBgDataWorker { get; set; }
         internal static bool AllowCsvWriting { get; set; }
-
-        internal static int totalNumberOfDataLines { get; set; }
 
 
         internal static string ConnectedMsg

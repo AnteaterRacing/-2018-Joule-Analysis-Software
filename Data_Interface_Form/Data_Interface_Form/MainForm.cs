@@ -14,8 +14,6 @@ using Excel = Microsoft.Office.Interop.Excel;
 // your computer when you get Microsoft Office.
 // I added it by going to references -> right click -> add reference -> browse 
 // -> browsed for C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c
-// You will also need Microsoft Excel 15.0 Object Library
-// You can find this by going to the References -> right click -> click the COM tab -> search for Microsoft Excel 15.0 Object Library and check it
 
 
 namespace Data_Interface_Form
@@ -153,10 +151,6 @@ namespace Data_Interface_Form
                 bgWorkerDataFlow.RunWorkerAsync();
                 dataTimer.Start();
                 csvTimer.Start();
-
-                
-
-
             }
         }
 
@@ -173,26 +167,6 @@ namespace Data_Interface_Form
             General.elapsedTime.Stop();
 
             General.RunThatBgDataWorker = false;
-
-
-        }
-
-        private void releaseObject(object obj)
-        {
-            try
-            {
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
-                obj = null;
-            }
-            catch (Exception ex)
-            {
-                obj = null;
-                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
-            }
-            finally
-            {
-                GC.Collect();
-            }
         }
 
 
@@ -204,95 +178,6 @@ namespace Data_Interface_Form
         private void disconnectBtn_Click(object sender, EventArgs e)
         {
             Disconnect();
-
-            if (excelCheckBox.Checked)
-            {
-                #region create the graph on the Excel sheet
-
-                Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
-
-                Excel.Workbook xlWorkBook;
-                Excel.Worksheet xlWorkSheet;
-                object misValue = System.Reflection.Missing.Value;
-
-                xlApp = new Excel.Application();
-                xlWorkBook = xlApp.Workbooks.Add(misValue);
-                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-                xlWorkSheet.Unprotect();
-
-                xlWorkSheet.Cells[1, 1] = "";
-
-                xlWorkSheet.Cells[1, 2] = "TTBR1";
-                xlWorkSheet.Cells[1, 3] = "TTBR2";
-                xlWorkSheet.Cells[1, 4] = "TTBR3";
-
-                xlWorkSheet.Cells[1, 5] = "TTBL1";
-                xlWorkSheet.Cells[1, 6] = "TTBL2";
-                xlWorkSheet.Cells[1, 7] = "TTBL3";
-
-                xlWorkSheet.Cells[1, 8] = "TTFR1";
-                xlWorkSheet.Cells[1, 9] = "TTFR2";
-                xlWorkSheet.Cells[1, 10] = "TTFR3";
-
-                xlWorkSheet.Cells[1, 11] = "TTFL1";
-                xlWorkSheet.Cells[1, 12] = "TTFL2";
-                xlWorkSheet.Cells[1, 13] = "TTFL3";
-
-                xlWorkSheet.Cells[1, 14] = "MT1";
-                xlWorkSheet.Cells[1, 15] = "MT2";
-
-                xlWorkSheet.Cells[1, 16] = "WSBR";
-                xlWorkSheet.Cells[1, 17] = "WSBL";
-                xlWorkSheet.Cells[1, 18] = "WSFR";
-                xlWorkSheet.Cells[1, 19] = "WSFL";
-
-                xlWorkSheet.Cells[1, 20] = "throttleR";
-                xlWorkSheet.Cells[1, 21] = "throttleL";
-
-                xlWorkSheet.Cells[1, 22] = "packVoltage_1";
-                xlWorkSheet.Cells[1, 23] = "packVoltage_2";
-                xlWorkSheet.Cells[1, 24] = "packCurrent_1";
-                xlWorkSheet.Cells[1, 25] = "packCurrent_2";
-                xlWorkSheet.Cells[1, 26] = "packTemperature";
-                xlWorkSheet.Cells[1, 27] = "packCharge";
-
-                xlWorkSheet.Cells[1, 28] = "steeringAngle";
-                xlWorkSheet.Cells[1, 29] = "brakeAngle";
-
-                for (int i = 0; i < (General.rawReadings.Count / (General.numberOfSensors + 1)); i++)
-                {
-
-                    for (int j = 0; j < (General.numberOfSensors + 1); j++)
-                    {
-                        xlWorkSheet.Cells[i + 2, j + 1] = (General.rawReadings[(i * (General.numberOfSensors + 1)) + j]);
-                    }
-
-                }
-
-                Excel.Range chartRange;
-
-                Excel.ChartObjects xlCharts = (Excel.ChartObjects)xlWorkSheet.ChartObjects(Type.Missing);
-                Excel.ChartObject myChart = (Excel.ChartObject)xlCharts.Add(10, 80, 500, 400);
-                Excel.Chart chartPage = myChart.Chart;
-
-                //The "AC" Lines up with the number of sensors to get the correct Excel sheet cell. 28 sensors leads to "AC," 29 to "AD," etc.
-                string last_cell = "AC" + (((General.rawReadings.Count) / (General.numberOfSensors + 1)) + 1).ToString();
-
-                chartRange = xlWorkSheet.get_Range("A1", last_cell);
-                chartPage.SetSourceData(chartRange, misValue);
-                chartPage.ChartType = Excel.XlChartType.xlXYScatterSmoothNoMarkers;
-
-                string FolderName = "/Users/Preston Rogers/Desktop/Communication";
-
-
-                xlWorkBook.SaveAs(FolderName + "\\data_Excel_" + General.startTime + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
-                xlWorkBook.Close(true, misValue, misValue);
-                xlApp.Quit();
-
-                infoLabel.Text = "Finised creating Excel Sheet!";
-
-                #endregion
-            }
         }
 
         private void HandleConnectButton()
@@ -392,8 +277,7 @@ namespace Data_Interface_Form
             if (General.AllowCsvWriting == true)
             {
                 Communication.WriteOutputToTextFile(General.dataForCsv);
-            }  
-            
+            }
 
             General.dataForCsv.Clear();
             General.AllowCsvWriting = false;
