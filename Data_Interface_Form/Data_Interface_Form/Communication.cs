@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO.Ports;
 using System.IO;
-
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Data_Interface_Form
@@ -55,7 +54,6 @@ namespace Data_Interface_Form
 
                         if (readByte == 255)
                         {
-                            General.rawReadings.Add(255);
                             General.XBee.Read(General.data, 0, General.numberOfSensors);
 
                             //This is to make sure there will be information to put on Csv
@@ -63,6 +61,7 @@ namespace Data_Interface_Form
 
                             //To get the timing of each data point
                             General.dataForCsv.Add((int)General.elapsedTime.ElapsedMilliseconds);
+                            General.rawReadings.Add((int)General.elapsedTime.ElapsedMilliseconds);
 
                             for (int i = 0; i < General.numberOfSensors; i++)
                             {
@@ -120,15 +119,15 @@ namespace Data_Interface_Form
 
 
             // Battery pack data being set
-            General.packVoltage = (int)map(sensorData[20], 0, 255, 0, 94);
-            General.packCurrent = (int)map(sensorData[21], 0, 255, 0, 500);
+            General.packVoltage = (int)map(Pack_Conversion((byte)sensorData[20], (byte)sensorData[21]), 0, 255, 0, 94) / 10;
+            General.packCurrent = (int)map(Pack_Conversion((byte)sensorData[22], (byte)sensorData[23]), 0, 255, 0, 500) / 10;
             // We do not know the ranges for the pack Temperatre currently
-            General.packTemperature = sensorData[22];
-            General.packCharge = sensorData[23];
+            General.packTemperature = sensorData[24];
+            General.packCharge = sensorData[25];
 
             // Steering and brake angle being set
-            General.steeringAngle = sensorData[24];
-            General.brakeAngle = sensorData[25];
+            General.steeringAngle = sensorData[26];
+            General.brakeAngle = sensorData[27];
         }
 
         #region calculations for sensor data
@@ -143,22 +142,30 @@ namespace Data_Interface_Form
 
             return temperature;
         }
+
         public static float map(this float value, float from1, float to1, float from2, float to2)
         {
             return ((value - from1) / (to1 - from1)) * (to2 - from2) + from2;
+        }
+
+        public static int Pack_Conversion(byte byte1, byte byte2)
+        {
+            int new_value = (byte1 << 8) | byte2;
+            //Recombines the two bytes into 1.
+            return new_value;
         }
         #endregion
 
         #region Optional Code for writing data to CSV file
 
-        //Below is optional code for writing to a csv file
+        //Code for writing to a csv file
         internal static void WriteOutputToTextFile(List<int> dataForCsv)
         {
             string dateForCSV = General.startTime;
 
             string FolderName = "C:/Users/Preston Rogers/Desktop/Communication";
 
-            using (StreamWriter SW = new StreamWriter(FolderName + "\\data_" + dateForCSV + ".csv", true))   //true makes it append to the file instead of overwrite
+            using (StreamWriter SW = new StreamWriter(FolderName + "\\data_csv_" + dateForCSV + ".csv", true))   //true makes it append to the file instead of overwrite
             {
                 //Divided by number of Sensors + 1 to acccount for the sensors and timing information
                 for (int i = 0; i < dataForCsv.Count; i++)
@@ -172,6 +179,25 @@ namespace Data_Interface_Form
                 }
 
                 SW.Close();
+            }
+        }
+
+        
+
+        internal static void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+            }
+            finally
+            {
+                GC.Collect();
             }
         }
 
