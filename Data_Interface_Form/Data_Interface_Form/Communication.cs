@@ -123,7 +123,7 @@ namespace Data_Interface_Form
             General.packCurrent = (int)map(Pack_Conversion((byte)sensorData[22], (byte)sensorData[23]), 0, 255, 0, 500) / 10;
             // We do not know the ranges for the pack Temperatre currently
             General.packTemperature = sensorData[24];
-            General.packCharge = sensorData[25];
+            General.packCharge = (int)map(sensorData[25], 0, 255, 0, 100); 
 
             // Steering and brake angle being set
             General.steeringAngle = sensorData[26];
