@@ -67,9 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackEnd.cs" />
-    <Compile Include="VisualDisplayForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="VisualDisplayForm.cs" />
     <Compile Include="VisualDisplayForm.Designer.cs">
       <DependentUpon>VisualDisplayForm.cs</DependentUpon>
     </Compile>
@@ -99,6 +97,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="VisualDisplayForm.resx">
       <DependentUpon>VisualDisplayForm.cs</DependentUpon>
@@ -128,6 +127,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\steeringWheel.png" />
     <Content Include="SensorDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

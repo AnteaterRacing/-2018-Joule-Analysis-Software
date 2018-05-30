@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO.Ports;
 using System.IO;
-using Excel = Microsoft.Office.Interop.Excel;
+//using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Data_Interface_Form
 {
@@ -119,8 +119,8 @@ namespace Data_Interface_Form
 
 
             // Battery pack data being set
-            General.packVoltage = (int)map(Pack_Conversion((byte)sensorData[20], (byte)sensorData[21]), 0, 255, 0, 94) / 10;
-            General.packCurrent = (int)map(Pack_Conversion((byte)sensorData[22], (byte)sensorData[23]), 0, 255, 0, 500) / 10;
+            General.packVoltage = (int)map((float)(Pack_Conversion((byte)sensorData[20], (byte)sensorData[21]) * 0.1), 0, 255, 0, 94) / 10;
+            General.packCurrent = (int)map((float)(Pack_Conversion((byte)sensorData[22], (byte)sensorData[23]) * 0.1), 0, 255, 0, 500) / 10;
             // We do not know the ranges for the pack Temperatre currently
             General.packTemperature = sensorData[24];
             General.packCharge = sensorData[25];

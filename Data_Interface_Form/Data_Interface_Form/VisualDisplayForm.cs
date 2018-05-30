@@ -10,6 +10,11 @@ using System.Windows.Forms;
 
 namespace Data_Interface_Form
 {
+    public static class lastSteeringWheelAngleValue
+    {
+        public static int lastSteeringWheelAngle = 0;
+    }
+
     public partial class VisualDisplayForm : Form
     {
         public VisualDisplayForm()
@@ -76,6 +81,21 @@ namespace Data_Interface_Form
             packVoltage = new Rectangle(300, 60, 50, 20);
             packVoltageEmpty = new Rectangle(350, 60, 10, 20);
             #endregion
+
+            #region Rotates Front Wheels Based on Steering Angle
+            if (lastSteeringWheelAngleValue.lastSteeringWheelAngle != (float)General.steeringAngle)
+            {
+                steeringWheel.Image = RotateImage(steeringWheel.Image, (float)General.steeringAngle);
+                lastSteeringWheelAngleValue.lastSteeringWheelAngle = General.steeringAngle
+            }
+            //frontLeftWheel1 = rotateRectangle(frontLeftWheel1);
+            //frontLeftWheel2 = rotateRectangle(frontLeftWheel2);
+            //frontLeftWheel3 = rotateRectangle(frontLeftWheel3);
+            //rotateRectangle(ref frontRightWheel1);
+            //rotateRectangle(ref frontRightWheel2);
+            //rotateRectangle(ref frontRightWheel3);
+            #endregion
+
 
             #region Create solid brush instances to color the rectangles
             SolidBrush fl1 = new SolidBrush(fl1_color);
@@ -171,5 +191,26 @@ namespace Data_Interface_Form
             this.Invalidate();
         }
 
+
+        public static Bitmap RotateImage(Image b, float angle) // Source: https://stackoverflow.com/questions/27431345/rotating-image-around-center-c-sharp?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+        {
+            //Create a new empty bitmap to hold rotated image.
+            Bitmap returnBitmap = new Bitmap(b.Width, b.Height);
+            //Make a graphics object from the empty bitmap.
+            Graphics g = Graphics.FromImage(returnBitmap);
+            //move rotation point to center of image.
+            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            g.TranslateTransform((float)b.Width / 2, (float)b.Height / 2);
+            //Rotate.        
+            g.RotateTransform(angle);
+            //Move image back.
+            g.TranslateTransform(-(float)b.Width / 2, -(float)b.Height / 2);
+            //Draw passed in image onto graphics object.
+            //Found ERROR 1: Many people do g.DwarImage(b,0,0); The problem is that you re giving just the position
+            //Found ERROR 2: Many people do g.DrawImage(b, new Point(0,0)); The size still not present hehe :3
+
+            g.DrawImage(b, 0, 0, b.Width, b.Height);  //My Final Solution :3
+            return returnBitmap;
+        }
     }
 }
