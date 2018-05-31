@@ -86,7 +86,7 @@ namespace Data_Interface_Form
             if (lastSteeringWheelAngleValue.lastSteeringWheelAngle != (float)General.steeringAngle)
             {
                 steeringWheel.Image = RotateImage(steeringWheel.Image, (float)General.steeringAngle);
-                lastSteeringWheelAngleValue.lastSteeringWheelAngle = General.steeringAngle
+                lastSteeringWheelAngleValue.lastSteeringWheelAngle = General.steeringAngle;
             }
             //frontLeftWheel1 = rotateRectangle(frontLeftWheel1);
             //frontLeftWheel2 = rotateRectangle(frontLeftWheel2);

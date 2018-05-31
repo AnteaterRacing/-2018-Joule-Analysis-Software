@@ -39,7 +39,7 @@ namespace Data_Interface_Form
             //If statemenet below makes sure that the user pressed the start button
             if (General.ReadingFromTheStream)
             {
-                if(General.XBee.IsOpen)
+                if (General.XBee.IsOpen)
                 {
 
                     //byte[] data = new byte[General.numberOfSensors];
@@ -170,7 +170,7 @@ namespace Data_Interface_Form
                 //Divided by number of Sensors + 1 to acccount for the sensors and timing information
                 for (int i = 0; i < dataForCsv.Count; i++)
                 {
-                    if (i % (General.numberOfSensors+1) == 0)
+                    if (i % (General.numberOfSensors + 1) == 0)
                     {
                         SW.WriteLine();
                     }
@@ -182,7 +182,7 @@ namespace Data_Interface_Form
             }
         }
 
-        
+
 
         internal static void releaseObject(object obj)
         {

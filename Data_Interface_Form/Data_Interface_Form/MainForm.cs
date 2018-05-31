@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Diagnostics;
-//using Excel = Microsoft.Office.Interop.Excel;
+using Excel = Microsoft.Office.Interop.Excel;
 // THE ABOVE USING IS ESSENTIAL!!!! You must look for this interop that is downloaded directly on 
 // your computer when you get Microsoft Office.
 // I added it by going to references -> right click -> add reference -> browse 
@@ -69,7 +69,7 @@ namespace Data_Interface_Form
 
         public void UpdateGUI()
         {
-            double currentElapsedTime = (double)General.elapsedTime.ElapsedMilliseconds/1000.0;
+            double currentElapsedTime = (double)General.elapsedTime.ElapsedMilliseconds / 1000.0;
 
             //Below allows for scrolling of the graph with greater General.chartSpeed values leading to slower scrolling
             if (scrollCheckBox.Checked)
@@ -145,16 +145,16 @@ namespace Data_Interface_Form
                 streamStopBtn.Enabled = true;
 
                 //dataTimer used to get information in a periodic fashion
-                
+
                 General.startTime = DateTime.Now.ToString("M-dd-yyyy--HH-mm-ss");
                 General.elapsedTime.Start();
                 General.RunThatBgDataWorker = true;
-           
+
                 bgWorkerDataFlow.RunWorkerAsync();
                 dataTimer.Start();
                 csvTimer.Start();
 
-                
+
 
 
             }
@@ -162,19 +162,7 @@ namespace Data_Interface_Form
 
         private void streamStopBtn_Click(object sender, EventArgs e)
         {
-            General.ReadingFromTheStream = false;
-            streamStartBtn.Enabled = true;
-            streamStopBtn.Enabled = false;
-
-            sqlSaveBtn.Enabled = true;
-
-            dataTimer.Enabled = false;
-            dataTimer.Enabled = false;
-            General.elapsedTime.Stop();
-
-            General.RunThatBgDataWorker = false;
-
-
+            handleStopButton();
         }
 
         private void releaseObject(object obj)
@@ -205,7 +193,7 @@ namespace Data_Interface_Form
         {
             Disconnect();
 
-            /*if (excelCheckBox.Checked)
+            if (excelCheckBox.Checked)
             {
                 #region create the graph on the Excel sheet
 
@@ -292,7 +280,7 @@ namespace Data_Interface_Form
                 infoLabel.Text = "Finised creating Excel Sheet!";
 
                 #endregion
-            }*/
+            }
         }
 
         private void HandleConnectButton()
@@ -320,6 +308,10 @@ namespace Data_Interface_Form
         private void Disconnect()
         {
             //---clean up
+            if (General.ReadingFromTheStream == true)
+            {
+                handleStopButton();
+            }
             infoLabel.Text = General.DisconnectedMsg;
             Communication.CloseCom();
 
@@ -354,7 +346,7 @@ namespace Data_Interface_Form
             {
                 General.chartSpeed = 50;
             }
-            else if (General.chartSpeed <5)
+            else if (General.chartSpeed < 5)
             {
                 General.chartSpeed = 5;
             }
@@ -392,11 +384,26 @@ namespace Data_Interface_Form
             if (General.AllowCsvWriting == true)
             {
                 Communication.WriteOutputToTextFile(General.dataForCsv);
-            }  
-            
+            }
+
 
             General.dataForCsv.Clear();
             General.AllowCsvWriting = false;
+        }
+
+        private void handleStopButton()
+        {
+            General.ReadingFromTheStream = false;
+            streamStartBtn.Enabled = true;
+            streamStopBtn.Enabled = false;
+
+            sqlSaveBtn.Enabled = true;
+
+            dataTimer.Enabled = false;
+            dataTimer.Enabled = false;
+            General.elapsedTime.Stop();
+
+            General.RunThatBgDataWorker = false;
         }
     }
 }
