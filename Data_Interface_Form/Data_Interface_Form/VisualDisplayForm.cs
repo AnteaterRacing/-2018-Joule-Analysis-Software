@@ -86,7 +86,7 @@ namespace Data_Interface_Form
             if (lastSteeringWheelAngleValue.lastSteeringWheelAngle != (float)General.steeringAngle)
             {
                 steeringWheel.Image = RotateImage(steeringWheel.Image, (float)General.steeringAngle);
-                lastSteeringWheelAngleValue.lastSteeringWheelAngle = General.steeringAngle
+                lastSteeringWheelAngleValue.lastSteeringWheelAngle = General.steeringAngle;
             }
             //frontLeftWheel1 = rotateRectangle(frontLeftWheel1);
             //frontLeftWheel2 = rotateRectangle(frontLeftWheel2);
@@ -212,5 +212,36 @@ namespace Data_Interface_Form
             g.DrawImage(b, 0, 0, b.Width, b.Height);  //My Final Solution :3
             return returnBitmap;
         }
+    }
+
+    public class RotatingRectangle
+    {
+        private enum rectangle { NW_point, NE_point, SE_point, SW_point };
+        public Point NW_point { get; set; }
+        public Point NE_point { get; set; }
+        public Point SW_point { get; set; }
+        public Point SE_point { get; set; }
+        public Point[] rectangle_vertices { get; set; }
+        public Point center { get; set; }
+
+        public RotatingRectangle(int upper_left_x, int upper_left_y, int width, int height)
+        {
+            NW_point = new Point(upper_left_x, upper_left_y);
+            NE_point = new Point(upper_left_x + width, upper_left_y);
+            SW_point = new Point(upper_left_x, upper_left_y - height);
+            SE_point = new Point(upper_left_x - width, upper_left_y - height);
+            center = new Point(upper_left_x - (width / 2), upper_left_y - (height / 2));
+        }
+
+        public Point[] rectanglePoints()
+        {
+            return new Point[] { NW_point, NE_point, SE_point, SW_point };
+        }
+
+        public void rotateRectangle(int angle)
+        {
+
+        }
+
     }
 }
