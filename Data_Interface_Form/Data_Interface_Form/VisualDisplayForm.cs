@@ -173,7 +173,8 @@ namespace Data_Interface_Form
             double x_rr2 = (((double)(General.TTBR2)) / 200.0);
             double x_rr3 = (((double)(General.TTBR3)) / 200.0);
 
-            width_packVoltage = (int)((General.packVoltage / 100.0) * (60.0));
+
+            width_packVoltage = (int)((General.packCharge / 100.0) * (60.0));
             width_packVoltageEmpty = 60 - width_packVoltage;
             x_packVoltageEmpty = x_packVoltage + width_packVoltage;
 
