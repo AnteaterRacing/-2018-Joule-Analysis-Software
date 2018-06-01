@@ -138,7 +138,7 @@ namespace Data_Interface_Form
             double temperature = Math.Log(voltage / 1.25) / Math.Log(1.0087);
 
             //Below is a conditional in case temperature is a low number
-            temperature = (temperature < 0) ? -10.0 : temperature;
+            temperature = (temperature < 0) ? 0.0 : temperature;
 
             return temperature;
         }

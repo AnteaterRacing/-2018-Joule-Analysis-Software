@@ -57,7 +57,17 @@ namespace Data_Interface_Form
 
         Color packVoltage_color = new Color();
         Color packVoltageEmpty_color = new Color();
-        #endregion 
+        #endregion
+
+        #region Declaring initial values for the pack charge visual
+
+        int width_packVoltage = 60;
+        int width_packVoltageEmpty = 0;
+
+        int x_packVoltage = 300;
+        int x_packVoltageEmpty = 360;
+
+        #endregion
 
         private void VisualDisplayForm_Paint(object sender, PaintEventArgs e)
         {
@@ -78,8 +88,10 @@ namespace Data_Interface_Form
             rearRightWheel2 = new Rectangle(165, 340, 15, 80);
             rearRightWheel3 = new Rectangle(180, 340, 15, 80);
 
-            packVoltage = new Rectangle(300, 60, 50, 20);
-            packVoltageEmpty = new Rectangle(350, 60, 10, 20);
+
+            packVoltage = new Rectangle(x_packVoltage, 60, width_packVoltage, 20);
+            packVoltageEmpty = new Rectangle(x_packVoltageEmpty, 60, width_packVoltageEmpty, 20);
+            
             #endregion
 
             #region Rotates Front Wheels Based on Steering Angle
@@ -151,20 +163,25 @@ namespace Data_Interface_Form
             double x_fr2 = General.TTFR2 > 0 ? (((double)(General.TTFR2)) / 200.0) : 0;
             double x_fr3 = General.TTFR3 > 0 ? (((double)(General.TTFR3)) / 200.0) : 0;
 
+<<<<<<< HEAD
             double x_rl1 = General.TTBL1 > 0 ? (((double)(General.TTBL1)) / 200.0) : 0;
             double x_rl2 = General.TTBL2 > 0 ? (((double)(General.TTBL2)) / 200.0) : 0;
             double x_rl3 = General.TTBL3 > 0 ? (((double)(General.TTBL3)) / 200.0) : 0;
+=======
+        
+            double x_rl1 = (((double)(General.TTBL1)) / 200.0);
+            double x_rl2 = (((double)(General.TTBL2)) / 200.0);
+            double x_rl3 = (((double)(General.TTBL3)) / 200.0);
+>>>>>>> fbb84bfd72a07f2fadd53a0f398a63b0fa9d0dfb
 
             double x_rr1 = General.TTBR1 > 0 ? (((double)(General.TTBR1)) / 200.0) : 0;
             double x_rr2 = General.TTBR2 > 0 ? (((double)(General.TTBR2)) / 200.0) : 0;
             double x_rr3 = General.TTBR3 > 0 ? (((double)(General.TTBR3)) / 200.0) : 0;
 
-            double x_packVoltage = ((General.packVoltage)*(1/255.0)*(60.0));
-            double x_packVoltageEmpty = 60.0 - x_packVoltage;
 
-            packVoltage.Width = (int)x_packVoltage;
-            packVoltageEmpty.X = 300 + (int)x_packVoltage;
-            packVoltageEmpty.Width = (int)x_packVoltageEmpty;
+            width_packVoltage = (int)((General.packCharge / 100.0) * (60.0));
+            width_packVoltageEmpty = 60 - width_packVoltage;
+            x_packVoltageEmpty = x_packVoltage + width_packVoltage;
 
 
             //This code will change the intensity of the tire color based on the tire temp
@@ -188,6 +205,7 @@ namespace Data_Interface_Form
             packVoltageEmpty_color = Color.Black;
 
             this.Invalidate();
+            return;
         }
 
 
