@@ -96,7 +96,6 @@ namespace Data_Interface_Form
             //rotateRectangle(ref frontRightWheel3);
             #endregion
 
-
             #region Create solid brush instances to color the rectangles
             SolidBrush fl1 = new SolidBrush(fl1_color);
             SolidBrush fl2 = new SolidBrush(fl2_color);
@@ -144,21 +143,21 @@ namespace Data_Interface_Form
         {
             
             //General.TTBL1 is divided by 200 in order to get it into a percentage approximately
-            double x_fl1 = (((double)(General.TTFL1)) / 200.0);
-            double x_fl2 = (((double)(General.TTFL2)) / 200.0);
-            double x_fl3 = (((double)(General.TTFL3)) / 200.0);
+            double x_fl1 = General.TTFL1 > 0 ? (((double)(General.TTFL1)) / 200.0) : 0;
+            double x_fl2 = General.TTFL2 > 0 ? (((double)(General.TTFL2)) / 200.0) : 0;
+            double x_fl3 = General.TTFL3 > 0 ? (((double)(General.TTFL3)) / 200.0) : 0;
 
-            double x_fr1 = (((double)(General.TTFR1)) / 200.0);
-            double x_fr2 = (((double)(General.TTFR2)) / 200.0);
-            double x_fr3 = (((double)(General.TTFR3)) / 200.0);
+            double x_fr1 = General.TTFR1 > 0 ? (((double)(General.TTFR1)) / 200.0) : 0;
+            double x_fr2 = General.TTFR2 > 0 ? (((double)(General.TTFR2)) / 200.0) : 0;
+            double x_fr3 = General.TTFR3 > 0 ? (((double)(General.TTFR3)) / 200.0) : 0;
 
-            double x_rl1 = (((double)(General.TTBL1)) / 200.0);
-            double x_rl2 = (((double)(General.TTBL2)) / 200.0);
-            double x_rl3 = (((double)(General.TTBL3)) / 200.0);
+            double x_rl1 = General.TTBL1 > 0 ? (((double)(General.TTBL1)) / 200.0) : 0;
+            double x_rl2 = General.TTBL2 > 0 ? (((double)(General.TTBL2)) / 200.0) : 0;
+            double x_rl3 = General.TTBL3 > 0 ? (((double)(General.TTBL3)) / 200.0) : 0;
 
-            double x_rr1 = (((double)(General.TTBR1)) / 200.0);
-            double x_rr2 = (((double)(General.TTBR2)) / 200.0);
-            double x_rr3 = (((double)(General.TTBR3)) / 200.0);
+            double x_rr1 = General.TTBR1 > 0 ? (((double)(General.TTBR1)) / 200.0) : 0;
+            double x_rr2 = General.TTBR2 > 0 ? (((double)(General.TTBR2)) / 200.0) : 0;
+            double x_rr3 = General.TTBR3 > 0 ? (((double)(General.TTBR3)) / 200.0) : 0;
 
             double x_packVoltage = ((General.packVoltage)*(1/255.0)*(60.0));
             double x_packVoltageEmpty = 60.0 - x_packVoltage;

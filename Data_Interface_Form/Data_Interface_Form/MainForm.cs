@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Diagnostics;
-using Excel = Microsoft.Office.Interop.Excel;
+//using Excel = Microsoft.Office.Interop.Excel;
 // THE ABOVE USING IS ESSENTIAL!!!! You must look for this interop that is downloaded directly on 
 // your computer when you get Microsoft Office.
 // I added it by going to references -> right click -> add reference -> browse 
@@ -193,7 +193,7 @@ namespace Data_Interface_Form
         {
             Disconnect();
 
-            if (excelCheckBox.Checked)
+           /* if (excelCheckBox.Checked)
             {
                 #region create the graph on the Excel sheet
 
@@ -280,7 +280,7 @@ namespace Data_Interface_Form
                 infoLabel.Text = "Finised creating Excel Sheet!";
 
                 #endregion
-            }
+            }*/
         }
 
         private void HandleConnectButton()
