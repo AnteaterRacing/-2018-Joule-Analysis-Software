@@ -10,11 +10,6 @@ using System.Windows.Forms;
 
 namespace Data_Interface_Form
 {
-    public static class lastSteeringWheelAngleValue
-    {
-        public static int lastSteeringWheelAngle = 0;
-    }
-
     public partial class VisualDisplayForm : Form
     {
         public VisualDisplayForm()
@@ -67,6 +62,31 @@ namespace Data_Interface_Form
         int x_packVoltage = 300;
         int x_packVoltageEmpty = 360;
 
+
+        //General.TTBL1 is divided by 200 in order to get it into a percentage approximately
+        double x_fl1 = 0;
+        double x_fl2 = 0;
+        double x_fl3 = 0;
+
+        double x_fr1 = 0;
+        double x_fr2 = 0;
+        double x_fr3 = 0;
+
+
+        double x_rl1 = 0;
+        double x_rl2 = 0;
+        double x_rl3 = 0;
+
+        double x_rr1 = 0;
+        double x_rr2 = 0;
+        double x_rr3 = 0;
+
+        #endregion
+
+        #region Declaring initial values for the steering wheel
+
+        int lastSteeringWheelAngleValue = 0;
+
         #endregion
 
         private void VisualDisplayForm_Paint(object sender, PaintEventArgs e)
@@ -91,14 +111,14 @@ namespace Data_Interface_Form
 
             packVoltage = new Rectangle(x_packVoltage, 60, width_packVoltage, 20);
             packVoltageEmpty = new Rectangle(x_packVoltageEmpty, 60, width_packVoltageEmpty, 20);
-            
+
             #endregion
 
             #region Rotates Front Wheels Based on Steering Angle
-            if (lastSteeringWheelAngleValue.lastSteeringWheelAngle != (float)General.steeringAngle)
+            if (lastSteeringWheelAngleValue != (float)General.steeringAngle)
             {
-                steeringWheel.Image = RotateImage(steeringWheel.Image, (float)General.steeringAngle);
-                lastSteeringWheelAngleValue.lastSteeringWheelAngle = General.steeringAngle;
+                steeringWheel.Image = RotateImage(steeringWheel.Image, (float)(General.steeringAngle - lastSteeringWheelAngleValue));
+                lastSteeringWheelAngleValue = General.steeringAngle;
             }
             //frontLeftWheel1 = rotateRectangle(frontLeftWheel1);
             //frontLeftWheel2 = rotateRectangle(frontLeftWheel2);
@@ -153,31 +173,25 @@ namespace Data_Interface_Form
 
         private void visualsUpdateTimer_Tick(object sender, EventArgs e)
         {
-            
-            //General.TTBL1 is divided by 200 in order to get it into a percentage approximately
-            double x_fl1 = General.TTFL1 > 0 ? (((double)(General.TTFL1)) / 200.0) : 0;
-            double x_fl2 = General.TTFL2 > 0 ? (((double)(General.TTFL2)) / 200.0) : 0;
-            double x_fl3 = General.TTFL3 > 0 ? (((double)(General.TTFL3)) / 200.0) : 0;
 
-            double x_fr1 = General.TTFR1 > 0 ? (((double)(General.TTFR1)) / 200.0) : 0;
-            double x_fr2 = General.TTFR2 > 0 ? (((double)(General.TTFR2)) / 200.0) : 0;
-            double x_fr3 = General.TTFR3 > 0 ? (((double)(General.TTFR3)) / 200.0) : 0;
+            x_fl1 = (((double)(General.TTFL1)) / 200.0);
+            x_fl2 = (((double)(General.TTFL2)) / 200.0);
+            x_fl3 = (((double)(General.TTFL3)) / 200.0);
 
-<<<<<<< HEAD
-            double x_rl1 = General.TTBL1 > 0 ? (((double)(General.TTBL1)) / 200.0) : 0;
-            double x_rl2 = General.TTBL2 > 0 ? (((double)(General.TTBL2)) / 200.0) : 0;
-            double x_rl3 = General.TTBL3 > 0 ? (((double)(General.TTBL3)) / 200.0) : 0;
-=======
-        
-            double x_rl1 = (((double)(General.TTBL1)) / 200.0);
-            double x_rl2 = (((double)(General.TTBL2)) / 200.0);
-            double x_rl3 = (((double)(General.TTBL3)) / 200.0);
->>>>>>> fbb84bfd72a07f2fadd53a0f398a63b0fa9d0dfb
+            x_fr1 = (((double)(General.TTFR1)) / 200.0);
+            x_fr2 = (((double)(General.TTFR2)) / 200.0);
+            x_fr3 = (((double)(General.TTFR3)) / 200.0);
 
-            double x_rr1 = General.TTBR1 > 0 ? (((double)(General.TTBR1)) / 200.0) : 0;
-            double x_rr2 = General.TTBR2 > 0 ? (((double)(General.TTBR2)) / 200.0) : 0;
-            double x_rr3 = General.TTBR3 > 0 ? (((double)(General.TTBR3)) / 200.0) : 0;
 
+            x_rl1 = (((double)(General.TTBL1)) / 200.0);
+            x_rl2 = (((double)(General.TTBL2)) / 200.0);
+            x_rl3 = (((double)(General.TTBL3)) / 200.0);
+
+            x_rr1 = (((double)(General.TTBR1)) / 200.0);
+            x_rr2 = (((double)(General.TTBR2)) / 200.0);
+            x_rr3 = (((double)(General.TTBR3)) / 200.0);
+
+            General.steeringAngle++;
 
             width_packVoltage = (int)((General.packCharge / 100.0) * (60.0));
             width_packVoltageEmpty = 60 - width_packVoltage;
@@ -253,11 +267,6 @@ namespace Data_Interface_Form
         public Point[] rectanglePoints()
         {
             return new Point[] { NW_point, NE_point, SE_point, SW_point };
-        }
-
-        public void rotateRectangle(int angle)
-        {
-
         }
 
     }
