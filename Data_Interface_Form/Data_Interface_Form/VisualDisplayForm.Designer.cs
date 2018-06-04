@@ -44,7 +44,7 @@
             // steeringWheel
             // 
             this.steeringWheel.Image = global::Data_Interface_Form.Properties.Resources.steeringWheel;
-            this.steeringWheel.Location = new System.Drawing.Point(816, 13);
+            this.steeringWheel.Location = new System.Drawing.Point(85, 250);
             this.steeringWheel.Name = "steeringWheel";
             this.steeringWheel.Size = new System.Drawing.Size(150, 150);
             this.steeringWheel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
