@@ -25,4 +25,4 @@ C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\D
 C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\Data_Interface_Form.exe.config
 C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\Data_Interface_Form.exe
 C:\Users\Vincent Ha\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\bin\Debug\Data_Interface_Form.pdb
-C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.lastSteeringWheelAngleValue.resources
+C:\Users\Preston Rogers\Documents\GitHub\JouleAnalysisSoftware\Data_Interface_Form\Data_Interface_Form\obj\Debug\Data_Interface_Form.VisualDisplayForm.resources
