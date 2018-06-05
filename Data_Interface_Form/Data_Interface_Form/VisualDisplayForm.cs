@@ -7,14 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace Data_Interface_Form
 {
-    public static class lastSteeringWheelAngleValue
-    {
-        public static int lastSteeringWheelAngle = 0;
-    }
-
     public partial class VisualDisplayForm : Form
     {
         public VisualDisplayForm()
@@ -22,6 +18,7 @@ namespace Data_Interface_Form
             InitializeComponent();
         }
 
+        Image steeringWheelOriginal;
         private void VisualDisplayForm_Load(object sender, EventArgs e)
         {
             General.visualDisplayFormAddress = this;
@@ -276,6 +273,7 @@ namespace Data_Interface_Form
                 m.RotateAt(angle, new PointF(Middle.Left + (Middle.Width / 2),
                                           Middle.Top + (Middle.Height / 2)));
                 g.Transform = m;
+    
                 g.FillRectangle(s, notMiddle);
                 g.ResetTransform();
             }
