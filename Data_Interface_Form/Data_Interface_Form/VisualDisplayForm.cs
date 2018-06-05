@@ -27,6 +27,7 @@ namespace Data_Interface_Form
             General.visualDisplayFormAddress = this;
 
             visualsUpdateTimer.Enabled = true;
+            steeringWheelOriginal = steeringWheel.Image;
         }
 
         #region Declaring rectangle objects
@@ -67,6 +68,31 @@ namespace Data_Interface_Form
         int x_packVoltage = 300;
         int x_packVoltageEmpty = 360;
 
+        //General.TTBL1 is divided by 200 in order to get it into a percentage approximately
+        double x_fl1 = 0;
+        double x_fl2 = 0;
+        double x_fl3 = 0;
+
+        double x_fr1 = 0;
+        double x_fr2 = 0;
+        double x_fr3 = 0;
+
+
+        double x_rl1 = 0;
+        double x_rl2 = 0;
+        double x_rl3 = 0;
+
+        double x_rr1 = 0;
+        double x_rr2 = 0;
+        double x_rr3 = 0;
+
+        int i = 0;
+        #endregion
+
+        #region Declaring initial values for the steering wheel
+
+        int lastSteeringWheelAngleValue = 0;
+        
         #endregion
 
         private void VisualDisplayForm_Paint(object sender, PaintEventArgs e)
@@ -91,21 +117,15 @@ namespace Data_Interface_Form
 
             packVoltage = new Rectangle(x_packVoltage, 60, width_packVoltage, 20);
             packVoltageEmpty = new Rectangle(x_packVoltageEmpty, 60, width_packVoltageEmpty, 20);
-            
+
             #endregion
 
             #region Rotates Front Wheels Based on Steering Angle
-            if (lastSteeringWheelAngleValue.lastSteeringWheelAngle != (float)General.steeringAngle)
+            if (lastSteeringWheelAngleValue != (float)General.steeringAngle)
             {
-                steeringWheel.Image = RotateImage(steeringWheel.Image, (float)General.steeringAngle);
-                lastSteeringWheelAngleValue.lastSteeringWheelAngle = General.steeringAngle;
+                steeringWheel.Image = RotateImage(steeringWheelOriginal, (float)(General.steeringAngle));
+                lastSteeringWheelAngleValue = General.steeringAngle;
             }
-            //frontLeftWheel1 = rotateRectangle(frontLeftWheel1);
-            //frontLeftWheel2 = rotateRectangle(frontLeftWheel2);
-            //frontLeftWheel3 = rotateRectangle(frontLeftWheel3);
-            //rotateRectangle(ref frontRightWheel1);
-            //rotateRectangle(ref frontRightWheel2);
-            //rotateRectangle(ref frontRightWheel3);
             #endregion
 
             #region Create solid brush instances to color the rectangles
@@ -130,13 +150,14 @@ namespace Data_Interface_Form
             #endregion
 
             #region Initially fill the color of the rectangles at visuals form openning
-            e.Graphics.FillRectangle(fl1, frontLeftWheel1);
-            e.Graphics.FillRectangle(fl2, frontLeftWheel2);
-            e.Graphics.FillRectangle(fl3, frontLeftWheel3);
 
-            e.Graphics.FillRectangle(fr1, frontRightWheel1);
-            e.Graphics.FillRectangle(fr2, frontRightWheel2);
-            e.Graphics.FillRectangle(fr3, frontRightWheel3);
+            RotateRectangle(e.Graphics, frontLeftWheel1, frontLeftWheel2, fl1, General.steeringAngle);
+            RotateRectangle(e.Graphics, frontLeftWheel2, frontLeftWheel2, fl2, General.steeringAngle);
+            RotateRectangle(e.Graphics, frontLeftWheel3, frontLeftWheel2, fl3, General.steeringAngle);
+
+            RotateRectangle(e.Graphics, frontRightWheel1, frontRightWheel2, fr1, General.steeringAngle);
+            RotateRectangle(e.Graphics, frontRightWheel2, frontRightWheel2, fr2, General.steeringAngle);
+            RotateRectangle(e.Graphics, frontRightWheel3, frontRightWheel2, fr3, General.steeringAngle);
 
             e.Graphics.FillRectangle(rl1, rearLeftWheel1);
             e.Graphics.FillRectangle(rl2, rearLeftWheel2);
@@ -153,35 +174,53 @@ namespace Data_Interface_Form
 
         private void visualsUpdateTimer_Tick(object sender, EventArgs e)
         {
+
+            x_fl1 = (((double)(General.TTFL1)) / 200.0);
+            x_fl2 = (((double)(General.TTFL2)) / 200.0);
+            x_fl3 = (((double)(General.TTFL3)) / 200.0);
+
+            x_fr1 = (((double)(General.TTFR1)) / 200.0);
+            x_fr2 = (((double)(General.TTFR2)) / 200.0);
+            x_fr3 = (((double)(General.TTFR3)) / 200.0);
+
+
+            x_rl1 = (((double)(General.TTBL1)) / 200.0);
+            x_rl2 = (((double)(General.TTBL2)) / 200.0);
+            x_rl3 = (((double)(General.TTBL3)) / 200.0);
+
+            x_rr1 = (((double)(General.TTBR1)) / 200.0);
+            x_rr2 = (((double)(General.TTBR2)) / 200.0);
+            x_rr3 = (((double)(General.TTBR3)) / 200.0);
+
+            General.packCharge++;
+            General.packCharge%=100;
             
-            //General.TTBL1 is divided by 200 in order to get it into a percentage approximately
-            double x_fl1 = General.TTFL1 > 0 ? (((double)(General.TTFL1)) / 200.0) : 0;
-            double x_fl2 = General.TTFL2 > 0 ? (((double)(General.TTFL2)) / 200.0) : 0;
-            double x_fl3 = General.TTFL3 > 0 ? (((double)(General.TTFL3)) / 200.0) : 0;
-
-            double x_fr1 = General.TTFR1 > 0 ? (((double)(General.TTFR1)) / 200.0) : 0;
-            double x_fr2 = General.TTFR2 > 0 ? (((double)(General.TTFR2)) / 200.0) : 0;
-            double x_fr3 = General.TTFR3 > 0 ? (((double)(General.TTFR3)) / 200.0) : 0;
-
-<<<<<<< HEAD
-            double x_rl1 = General.TTBL1 > 0 ? (((double)(General.TTBL1)) / 200.0) : 0;
-            double x_rl2 = General.TTBL2 > 0 ? (((double)(General.TTBL2)) / 200.0) : 0;
-            double x_rl3 = General.TTBL3 > 0 ? (((double)(General.TTBL3)) / 200.0) : 0;
-=======
-        
-            double x_rl1 = (((double)(General.TTBL1)) / 200.0);
-            double x_rl2 = (((double)(General.TTBL2)) / 200.0);
-            double x_rl3 = (((double)(General.TTBL3)) / 200.0);
->>>>>>> fbb84bfd72a07f2fadd53a0f398a63b0fa9d0dfb
-
-            double x_rr1 = General.TTBR1 > 0 ? (((double)(General.TTBR1)) / 200.0) : 0;
-            double x_rr2 = General.TTBR2 > 0 ? (((double)(General.TTBR2)) / 200.0) : 0;
-            double x_rr3 = General.TTBR3 > 0 ? (((double)(General.TTBR3)) / 200.0) : 0;
-
+            if (i % 30 < 10)
+            {
+                General.TTFL1++;
+                
+                General.TTFL1 = General.TTFL1 % 200;
+                i++;
+                General.steeringAngle += 1;
+            }
+            else if (i % 30 < 20)
+            {
+                General.TTFR1+=4;
+                General.TTFR1 = General.TTFR1 % 200;
+                General.steeringAngle -= 5;
+                i++;
+            }
+            else
+            {
+                General.steeringAngle = 0;
+                i++;
+            }
+            
 
             width_packVoltage = (int)((General.packCharge / 100.0) * (60.0));
             width_packVoltageEmpty = 60 - width_packVoltage;
             x_packVoltageEmpty = x_packVoltage + width_packVoltage;
+
 
 
             //This code will change the intensity of the tire color based on the tire temp
@@ -229,36 +268,17 @@ namespace Data_Interface_Form
             g.DrawImage(b, 0, 0, b.Width, b.Height);  //My Final Solution :3
             return returnBitmap;
         }
-    }
 
-    public class RotatingRectangle
-    {
-        private enum rectangle { NW_point, NE_point, SE_point, SW_point };
-        public Point NW_point { get; set; }
-        public Point NE_point { get; set; }
-        public Point SW_point { get; set; }
-        public Point SE_point { get; set; }
-        public Point[] rectangle_vertices { get; set; }
-        public Point center { get; set; }
-
-        public RotatingRectangle(int upper_left_x, int upper_left_y, int width, int height)
+        public void RotateRectangle(Graphics g, Rectangle notMiddle, Rectangle Middle, SolidBrush s, float angle)
         {
-            NW_point = new Point(upper_left_x, upper_left_y);
-            NE_point = new Point(upper_left_x + width, upper_left_y);
-            SW_point = new Point(upper_left_x, upper_left_y - height);
-            SE_point = new Point(upper_left_x - width, upper_left_y - height);
-            center = new Point(upper_left_x - (width / 2), upper_left_y - (height / 2));
+            using (Matrix m = new Matrix())
+            {
+                m.RotateAt(angle, new PointF(Middle.Left + (Middle.Width / 2),
+                                          Middle.Top + (Middle.Height / 2)));
+                g.Transform = m;
+                g.FillRectangle(s, notMiddle);
+                g.ResetTransform();
+            }
         }
-
-        public Point[] rectanglePoints()
-        {
-            return new Point[] { NW_point, NE_point, SE_point, SW_point };
-        }
-
-        public void rotateRectangle(int angle)
-        {
-
-        }
-
     }
 }

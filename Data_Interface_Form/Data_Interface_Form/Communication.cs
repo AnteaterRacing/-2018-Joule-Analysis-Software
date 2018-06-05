@@ -42,10 +42,6 @@ namespace Data_Interface_Form
                 if (General.XBee.IsOpen)
                 {
 
-                    //byte[] data = new byte[General.numberOfSensors];
-
-                    //int[] dataInt = new int[General.numberOfSensors];
-
                     int readByte;
 
                     if (General.XBee.BytesToRead > 0)
