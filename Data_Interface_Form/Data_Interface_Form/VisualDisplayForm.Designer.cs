@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.visualsUpdateTimer = new System.Windows.Forms.Timer(this.components);
             this.steeringWheel = new System.Windows.Forms.PictureBox();
-            
             ((System.ComponentModel.ISupportInitialize)(this.steeringWheel)).BeginInit();
-            
             this.SuspendLayout();
             // 
             // visualsUpdateTimer
@@ -44,13 +42,12 @@
             // steeringWheel
             // 
             this.steeringWheel.Image = global::Data_Interface_Form.Properties.Resources.steeringWheel;
-            this.steeringWheel.Location = new System.Drawing.Point(85, 250);
+            this.steeringWheel.Location = new System.Drawing.Point(72, 251);
             this.steeringWheel.Name = "steeringWheel";
             this.steeringWheel.Size = new System.Drawing.Size(150, 150);
             this.steeringWheel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.steeringWheel.TabIndex = 0;
             this.steeringWheel.TabStop = false;
-            
             // 
             // VisualDisplayForm
             // 
@@ -65,6 +62,7 @@
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.VisualDisplayForm_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.steeringWheel)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion
