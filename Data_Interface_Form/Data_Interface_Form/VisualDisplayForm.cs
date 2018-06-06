@@ -19,6 +19,7 @@ namespace Data_Interface_Form
         }
 
         Image steeringWheelOriginal;
+
         private void VisualDisplayForm_Load(object sender, EventArgs e)
         {
             General.visualDisplayFormAddress = this;
@@ -34,6 +35,7 @@ namespace Data_Interface_Form
         Rectangle rearRightWheel1, rearRightWheel2, rearRightWheel3;
 
         Rectangle packVoltage, packVoltageEmpty;
+        Rectangle borderVoltage;
         #endregion
 
         #region Declaring color objects for the rectangles
@@ -55,6 +57,7 @@ namespace Data_Interface_Form
 
         Color packVoltage_color = new Color();
         Color packVoltageEmpty_color = new Color();
+        Color borderVoltage_color = new Color();
         #endregion
 
         #region Declaring initial values for the pack charge visual
@@ -89,7 +92,7 @@ namespace Data_Interface_Form
         #region Declaring initial values for the steering wheel
 
         int lastSteeringWheelAngleValue = 0;
-        
+
         #endregion
 
         private void VisualDisplayForm_Paint(object sender, PaintEventArgs e)
@@ -114,7 +117,7 @@ namespace Data_Interface_Form
 
             packVoltage = new Rectangle(x_packVoltage, 60, width_packVoltage, 20);
             packVoltageEmpty = new Rectangle(x_packVoltageEmpty, 60, width_packVoltageEmpty, 20);
-
+            borderVoltage = new Rectangle(x_packVoltage, 60, 60, 20);
             #endregion
 
             #region Rotates Front Wheels Based on Steering Angle
@@ -144,6 +147,7 @@ namespace Data_Interface_Form
 
             SolidBrush voltageBrush = new SolidBrush(packVoltage_color);
             SolidBrush voltageEmptyBrush = new SolidBrush(packVoltageEmpty_color);
+            Pen borderVoltagePen = new Pen(borderVoltage_color);
             #endregion
 
             #region Initially fill the color of the rectangles at visuals form openning
@@ -166,6 +170,7 @@ namespace Data_Interface_Form
 
             e.Graphics.FillRectangle(voltageBrush, packVoltage);
             e.Graphics.FillRectangle(voltageEmptyBrush, packVoltageEmpty);
+            e.Graphics.DrawRectangle(borderVoltagePen, borderVoltage);
             #endregion
         }
 
@@ -190,19 +195,19 @@ namespace Data_Interface_Form
             x_rr3 = (((double)(General.TTBR3)) / 200.0);
 
             General.packCharge++;
-            General.packCharge%=100;
-            
+            General.packCharge %= 100;
+
             if (i % 30 < 10)
             {
                 General.TTFL1++;
-                
+
                 General.TTFL1 = General.TTFL1 % 200;
                 i++;
                 General.steeringAngle += 1;
             }
             else if (i % 30 < 20)
             {
-                General.TTFR1+=4;
+                General.TTFR1 += 4;
                 General.TTFR1 = General.TTFR1 % 200;
                 General.steeringAngle -= 5;
                 i++;
@@ -212,13 +217,11 @@ namespace Data_Interface_Form
                 General.steeringAngle = 0;
                 i++;
             }
-            
+
 
             width_packVoltage = (int)((General.packCharge / 100.0) * (60.0));
             width_packVoltageEmpty = 60 - width_packVoltage;
             x_packVoltageEmpty = x_packVoltage + width_packVoltage;
-
-
 
             //This code will change the intensity of the tire color based on the tire temp
             fl1_color = Color.FromArgb(Color.Red.A, (int)((Color.Red.R) * x_fl1), (int)((Color.Red.G) * x_fl1), (int)((Color.Red.B) * x_fl1));
@@ -239,6 +242,7 @@ namespace Data_Interface_Form
 
             packVoltage_color = Color.Green;
             packVoltageEmpty_color = Color.Black;
+            borderVoltage_color = Color.OrangeRed;
 
             this.Invalidate();
             return;
@@ -273,7 +277,7 @@ namespace Data_Interface_Form
                 m.RotateAt(angle, new PointF(Middle.Left + (Middle.Width / 2),
                                           Middle.Top + (Middle.Height / 2)));
                 g.Transform = m;
-    
+
                 g.FillRectangle(s, notMiddle);
                 g.ResetTransform();
             }
